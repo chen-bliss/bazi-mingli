@@ -8,6 +8,7 @@ interface Stats {
   counterexamples: number;
   fitAssessment: Record<string, number>;
   fields: string[];
+  countries?: string[];
   female?: number;
   countryCount?: number;
   withComputableDay?: number;
@@ -19,6 +20,7 @@ export function FiguresBrowser() {
   const [field, setField] = useState("");
   const [fit, setFit] = useState("");
   const [gender, setGender] = useState("");
+  const [country, setCountry] = useState("");
   const [q, setQ] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
 
@@ -27,6 +29,7 @@ export function FiguresBrowser() {
     if (field) params.set("field", field);
     if (fit) params.set("fit", fit);
     if (gender) params.set("gender", gender);
+    if (country) params.set("country", country);
     if (q) params.set("q", q);
     const [sRes, fRes] = await Promise.all([
       fetch("/api/figures?stats=1"),
@@ -92,6 +95,18 @@ export function FiguresBrowser() {
             <option value="">全部</option>
             <option value="female">女</option>
             <option value="male">男</option>
+            <option value="unknown">未标</option>
+          </select>
+        </label>
+        <label>
+          国家
+          <select value={country} onChange={(e) => setCountry(e.target.value)}>
+            <option value="">全部</option>
+            {(stats?.countries ?? []).map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
           </select>
         </label>
         <label>

@@ -15,12 +15,13 @@
    - 展示今日相位、近月曲线与临界日
    - 明确标注：经典三周期缺乏可靠现代科学支持；昼夜节律与时间生物学才是科学研究
 3. **历史人物库与相似命例**（`kind=figure`，名人对照库）
-   - 种子数据见 [`data/historical-figures.json`](./data/historical-figures.json)（约 70+ 人，可扩展）
-   - 覆盖东亚与西方及其他地区、男女、帝王与平民、政治/科学/艺术/军事/商业/宗教/文学等
+   - 种子数据见 [`data/historical-figures.json`](./data/historical-figures.json)（约 170+ 人；`npm run figures:enrich` 可合并扩展批次）
+   - 覆盖东亚与西方、非洲、拉美及其他地区；提高女性比例；中国多省与多国文明圈；政治/科学/艺术/军事/商业/宗教/医学/体育/社会运动等
    - 字段含 `gender`、`country`/`region`、`birthCertainty`（exact / year-only / disputed / legendary）、`fitDetail`、`baziFeatures`
    - **符合 / 部分符合 / 不符合 / 资料不足** 与 `counterexample` 均为一等公民，用于抑制确认偏误
    - 排盘后按日主、日柱、阴阳、月令季节、五行向量余弦、十神倾向类比，并尽量纳入反例
    - **不伪造未知时辰**；legendary / year-only 不参与或仅弱参与自动八字匹配
+   - 浏览页可按领域、推演评估、性别、国家与关键词筛选
 4. **历史命例库**（`kind=mingli-case`，偏排盘与格局教学）
    - 种子数据见 [`data/mingli-cases.json`](./data/mingli-cases.json)
    - 收录有一定生辰文献基础的近现代与历史案例，以及明确标注“资料不足”的典籍示意条目

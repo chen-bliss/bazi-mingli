@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { EXTRA2 } from "./figures-batch2.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dataPath = path.join(__dirname, "../data/historical-figures.json");
@@ -665,8 +666,10 @@ const enriched = raw.map((fig) => {
   };
 });
 
-for (const extra of EXTRA) {
+const allExtras = [...EXTRA, ...EXTRA2].filter((x) => x && !x.skip);
+for (const extra of allExtras) {
   if (existingIds.has(extra.id)) continue;
+  existingIds.add(extra.id);
   enriched.push({
     ...extra,
     birth: {
