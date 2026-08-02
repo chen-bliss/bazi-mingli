@@ -1,7 +1,7 @@
 import { buildBaZiChart } from "@/lib/bazi";
 import raw from "../../../data/historical-figures.json";
 import { seasonalityOfZhi, yinYangOfGan } from "./features";
-import type { BirthCertainty, HistoricalFigure } from "./types";
+import type { BirthCertainty, ChartTags, HistoricalFigure } from "./types";
 
 function precisionToCertainty(
   precision: HistoricalFigure["birth"]["precision"],
@@ -21,11 +21,12 @@ function canComputeDay(fig: HistoricalFigure): boolean {
   return precision === "exact-date" || precision === "uncertain";
 }
 
-function enrich(fig: HistoricalFigure): HistoricalFigure {
+export function enrichFigureRecord(fig: HistoricalFigure): HistoricalFigure {
   const birthCertainty =
     fig.birth.birthCertainty ?? precisionToCertainty(fig.birth.precision);
   const withCertainty: HistoricalFigure = {
     ...fig,
+    kind: fig.kind ?? "figure",
     gender: fig.gender ?? "unknown",
     country: fig.country ?? "未知",
     birth: { ...fig.birth, birthCertainty },
@@ -94,22 +95,22 @@ function enrich(fig: HistoricalFigure): HistoricalFigure {
         ),
       ).slice(0, 4),
       hourKnown: withCertainty.birth.hour != null,
-      source:
-        withCertainty.chartTags.source === "curated" ? "mixed" : "computed",
-      confidence:
-        withCertainty.birth.precision === "exact-date" &&
-        withCertainty.birth.hour != null
-          ? ("high" as const)
-          : withCertainty.birth.precision === "exact-date"
-            ? ("medium" as const)
-            : ("low" as const),
+      source: (withCertainty.chartTags.source === "curated"
+        ? "mixed"
+        : "computed") as ChartTags["source"],
+      confidence: (withCertainty.birth.precision === "exact-date" &&
+      withCertainty.birth.hour != null
+        ? "high"
+        : withCertainty.birth.precision === "exact-date"
+          ? "medium"
+          : "low") as ChartTags["confidence"],
       patternTags: Array.from(
         new Set([
           ...(withCertainty.chartTags.patternTags ?? []),
           "日柱可计算",
         ]),
       ),
-    };
+    } satisfies ChartTags;
 
     return {
       ...withCertainty,
@@ -128,7 +129,7 @@ let cache: HistoricalFigure[] | null = null;
 
 export function loadHistoricalFigures(): HistoricalFigure[] {
   if (!cache) {
-    cache = (raw as HistoricalFigure[]).map(enrich);
+    cache = (raw as HistoricalFigure[]).map(enrichFigureRecord);
   }
   return cache;
 }

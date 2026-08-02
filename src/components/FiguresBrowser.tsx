@@ -47,12 +47,12 @@ export function FiguresBrowser() {
   return (
     <section className="panel" id="figures">
       <header className="section-head">
-        <h2>历史人物库</h2>
+        <h2>历史人物库（名人对照）</h2>
         <p>
           {stats
             ? `共 ${stats.total} 人（女 ${stats.female ?? "-"}，反例 ${stats.counterexamples}，可排日柱约 ${stats.withComputableDay ?? "-"}）；约 ${stats.countryCount ?? "-"} 个国家或文明圈，${stats.fields.length} 个领域标签`
             : "加载中……"}
-          。人物库用于教育对照，详见{" "}
+          。本库 <code>kind=figure</code>，用于相似命例匹配；格局教学见下方「历史命例库」。详见{" "}
           <a
             href="https://github.com/chen-bliss/bazi-mingli/blob/master/PRIOR_ART.md"
             target="_blank"

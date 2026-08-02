@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { buildBaZiChart } from "@/lib/bazi";
 import { calculateBiorhythm } from "@/lib/biorhythm";
 import { featuresFromChart, matchHistoricalFigures } from "@/lib/figures";
+import { withLinkedCases } from "@/lib/mingli-cases";
 import { assertHumanRequest, getClientIp } from "@/lib/security/bot-guard";
 import { consumeIpChart } from "@/lib/security/quota-store";
 import { chartRequestSchema } from "@/lib/validation";
@@ -41,10 +42,12 @@ export async function POST(req: NextRequest) {
     const target = targetDate ? new Date(targetDate) : new Date();
     const biorhythm = calculateBiorhythm({ year, month, day }, target, 30);
     const features = featuresFromChart(chart, { hourKnown: true, biorhythm });
-    const matches = matchHistoricalFigures(features, {
-      limit: 6,
-      includeCounterexamples: true,
-    });
+    const matches = withLinkedCases(
+      matchHistoricalFigures(features, {
+        limit: 6,
+        includeCounterexamples: true,
+      }),
+    );
 
     return NextResponse.json({
       chart,

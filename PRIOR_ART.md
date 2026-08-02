@@ -244,7 +244,7 @@
 
 ---
 
-## 7. 历史人物命例库（本仓实现）
+## 7. 历史人物库与历史命例库（本仓实现）
 
 公开检索可见大量“名人八字”博客与付费命书，但**少有**把“符合 / 不符合推演”的反例作为一等数据、并拒绝伪造时辰的开源结构化库。
 
@@ -255,9 +255,13 @@
 3. 匹配是确定性特征类比（日干支、阴阳、季节、五行向量余弦、十神），可选 LLM 只解释已给结果，禁止表述为命运复现。  
 4. 与名人商业断语库解耦：只保留公开生平要点与可核日期层；传记不编造。  
 5. 种子库强调多样性：不同阶层、时代、领域、中国各省与多国、男女比例刻意纳入。  
+6. **双库分立**：`kind=figure` 为名人对照库；`kind=mingli-case` 为排盘与格局教学命例库。后者增加 `pedagogicalFocus`、`lifeOutcomeNotes`、`teachingAngle`，并可用 `linkedFigureId` 互链。典籍示意条目（无可靠生辰）必须标 `资料不足`，不得补造生日时辰。  
 
-数据文件：`data/historical-figures.json`  
-API：`POST /api/chart`（附带 matches）、`POST /api/figures/match`、`POST /api/match-figures`、`GET /api/figures`
+| 库 | 数据文件 | API / UI |
+|----|----------|----------|
+| 名人对照库 | `data/historical-figures.json` | `GET /api/figures`、`GET /api/figures/[id]`；页面「历史人物库」 |
+| 历史命例库 | `data/mingli-cases.json` | `GET /api/mingli-cases`、`GET /api/mingli-cases/[id]`；页面「历史命例库」 |
+| 相似匹配 | （读人物库） | `POST /api/chart`、`POST /api/figures/match`（结果可含 `linkedCaseId`） |
 
 ---
 
@@ -268,3 +272,4 @@ API：`POST /api/chart`（附带 matches）、`POST /api/figures/match`、`POST 
 | 2026-08-02 | 初版：公开 Web/GitHub 检索汇总，写入本文件。 |
 | 2026-08-02 | 增补：历史人物库与反例优先的相似命例匹配原则。 |
 | 2026-08-02 | 落地：种子库扩展、地理与性别字段、五行余弦匹配、UI“历史上相近人物”。 |
+| 2026-08-02 | 增补：独立「历史命例库」数据、筛选浏览 API/UI，与名人库以 kind / linkedFigureId 区分与互链。 |

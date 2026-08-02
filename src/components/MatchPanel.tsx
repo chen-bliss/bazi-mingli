@@ -82,6 +82,14 @@ export function MatchPanel({ matches }: { matches: FigureMatch[] }) {
               </p>
             ))}
             <p className="muted">来源：{m.figure.sources.slice(0, 2).join("；")}</p>
+            {(m.linkedCaseId || m.figure.linkedCaseId) && (
+              <p>
+                <a href={`#mingli-case-${m.linkedCaseId || m.figure.linkedCaseId}`}>
+                  查看命例库教学条目
+                </a>
+                <span className="muted">（排盘与格局教学，非命运证明）</span>
+              </p>
+            )}
           </article>
         ))}
       </div>

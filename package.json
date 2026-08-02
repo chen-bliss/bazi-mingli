@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "eslint",
     "smoke": "npx tsx scripts/smoke.ts",
-    "figures:enrich": "node scripts/enrich-figures.mjs"
+    "figures:enrich": "node scripts/enrich-figures.mjs",
+    "cases:generate": "node scripts/generate-mingli-cases.mjs"
   },
   "dependencies": {
     "lunar-javascript": "^1.7.7",

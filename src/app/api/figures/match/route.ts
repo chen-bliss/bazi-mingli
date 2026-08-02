@@ -5,6 +5,7 @@ import {
   featuresFromChart,
   matchHistoricalFigures,
 } from "@/lib/figures";
+import { withLinkedCases } from "@/lib/mingli-cases";
 import { assertHumanRequest, getClientIp } from "@/lib/security/bot-guard";
 import { consumeIpChart } from "@/lib/security/quota-store";
 import { chartRequestSchema } from "@/lib/validation";
@@ -48,16 +49,18 @@ export async function POST(req: NextRequest) {
       hourKnown: true,
       biorhythm,
     });
-    const matches = matchHistoricalFigures(features, {
-      limit,
-      includeCounterexamples: true,
-    });
+    const matches = withLinkedCases(
+      matchHistoricalFigures(features, {
+        limit,
+        includeCounterexamples: true,
+      }),
+    );
 
     return NextResponse.json({
       features,
       matches,
       disclaimer:
-        "相似命例是基于日主、五行、十神倾向与叙事标签的类比检索，并强制纳入反例视角。不能证明命运轨迹将重复。",
+        "相似命例是基于日主、五行、十神倾向与叙事标签的类比检索，并强制纳入反例视角。不能证明命运轨迹将重复。若匹配人物亦收录于命例库，结果含 linkedCaseId。",
       quota: { remaining: quota.remaining, limit: quota.limit },
     });
   } catch (error) {

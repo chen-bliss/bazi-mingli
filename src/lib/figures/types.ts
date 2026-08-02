@@ -14,6 +14,9 @@ export type StrengthLabel = "偏弱" | "中和" | "偏强" | "不明";
 
 export type FigureGender = "male" | "female" | "unknown";
 
+/** figures=名人对照库；mingli-case=排盘与格局教学命例 */
+export type CaseKind = "figure" | "mingli-case";
+
 export interface FigureBirth {
   year?: number;
   month?: number;
@@ -60,6 +63,8 @@ export interface HistoricalFigure {
   id: string;
   name: string;
   nameEn?: string;
+  /** 缺省视为名人对照库条目 */
+  kind?: CaseKind;
   gender: FigureGender;
   era: string;
   dynastyOrPeriod: string;
@@ -76,6 +81,15 @@ export interface HistoricalFigure {
   baziFeatures?: ChartTags;
   bio: string;
   situation: string;
+  /** 简要生平结果要点（命例库教学用；人物库可省略） */
+  lifeOutcomeNotes?: string;
+  /** 格局/十神/用神等教学焦点 */
+  pedagogicalFocus?: string[];
+  /** 课堂讨论角度（反确认偏误） */
+  teachingAngle?: string;
+  /** 若同时存在于另一库，互链 id */
+  linkedFigureId?: string;
+  linkedCaseId?: string;
   fitAssessment: FitAssessment;
   fitDetail?: FitAssessmentDetail;
   analysisNotes: string;
@@ -84,6 +98,13 @@ export interface HistoricalFigure {
   biorhythmNote?: string;
   /** 作为“不符合推演”的反例优先展示标记 */
   counterexample?: boolean;
+}
+
+/** 命例库：偏排盘与格局教学的结构化案例 */
+export interface MingliCase extends HistoricalFigure {
+  kind: "mingli-case";
+  pedagogicalFocus: string[];
+  lifeOutcomeNotes: string;
 }
 
 export interface ChartFeatures {
@@ -113,4 +134,6 @@ export interface MatchExplanation {
 
 export interface FigureMatch extends MatchExplanation {
   figure: HistoricalFigure;
+  /** 若该人物同时收录于命例库教学条目 */
+  linkedCaseId?: string;
 }

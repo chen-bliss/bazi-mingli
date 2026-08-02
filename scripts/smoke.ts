@@ -5,6 +5,11 @@ import {
   listFigureStats,
   matchHistoricalFigures,
 } from "../src/lib/figures";
+import {
+  listMingliCaseStats,
+  loadMingliCases,
+  withLinkedCases,
+} from "../src/lib/mingli-cases";
 import { buildDeterministicAnalysis } from "../src/lib/llm/prompts";
 
 const chart = buildBaZiChart({
@@ -23,8 +28,12 @@ const bio = calculateBiorhythm(
 
 const text = buildDeterministicAnalysis(chart, bio);
 const features = featuresFromChart(chart, { hourKnown: true, biorhythm: bio });
-const matches = matchHistoricalFigures(features, { limit: 6 });
+const matches = withLinkedCases(
+  matchHistoricalFigures(features, { limit: 6 }),
+);
 const stats = listFigureStats();
+const caseStats = listMingliCaseStats();
+const cases = loadMingliCases();
 
 if (!chart.pillars.day.ganZhi) throw new Error("missing day pillar");
 if (bio.today.physical.periodDays !== 23) throw new Error("bad physical period");
@@ -41,6 +50,20 @@ if (!matches.some((m) => m.figure.counterexample || m.figure.fitAssessment === "
 if (!features.elementCounts || !features.dayMasterYinYang) {
   throw new Error("features missing element/yinYang fields");
 }
+if (caseStats.total < 30) throw new Error("mingli-cases seed too small");
+if ((caseStats.female ?? 0) < 8) throw new Error("mingli-cases female coverage too thin");
+if ((caseStats.counterexamples ?? 0) < 5) {
+  throw new Error("mingli-cases need more counterexamples");
+}
+if (cases.some((c) => c.birth.hour != null)) {
+  throw new Error("mingli-cases must keep unknown hours as null");
+}
+if (!cases.every((c) => c.kind === "mingli-case")) {
+  throw new Error("mingli-cases kind must be mingli-case");
+}
+if (!cases.some((c) => c.fitAssessment === "资料不足")) {
+  throw new Error("mingli-cases should include 资料不足 rows");
+}
 
 console.log("smoke ok");
 console.log("dayMaster", chart.dayMaster, chart.pillars.day.ganZhi);
@@ -51,6 +74,14 @@ console.log(
   bio.today.intellectual.percent,
 );
 console.log("figures", stats.total, "counterexamples", stats.counterexamples);
+console.log(
+  "mingli-cases",
+  caseStats.total,
+  "counterexamples",
+  caseStats.counterexamples,
+  "linked",
+  caseStats.linkedToFigures,
+);
 console.log(
   "matches",
   matches.map((m) => `${m.figure.name}:${m.score}`).join(" | "),

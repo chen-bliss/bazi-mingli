@@ -7,6 +7,7 @@ import { BirthForm, type BirthFormValues } from "@/components/BirthForm";
 import { BiorhythmPanel } from "@/components/BiorhythmPanel";
 import { ChartPanel } from "@/components/ChartPanel";
 import { FiguresBrowser } from "@/components/FiguresBrowser";
+import { MingliCasesBrowser } from "@/components/MingliCasesBrowser";
 import { MatchPanel } from "@/components/MatchPanel";
 import type { BaZiChart } from "@/lib/bazi";
 import type { BiorhythmResult } from "@/lib/biorhythm";
@@ -108,6 +109,7 @@ export default function Home() {
           <a href="#biorhythm">节律</a>
           <a href="#matches">相近人物</a>
           <a href="#figures">人物库</a>
+          <a href="#mingli-cases">命例库</a>
           <a href="#analyze">演算</a>
           <a
             href="https://github.com/chen-bliss/bazi-mingli"
@@ -124,7 +126,7 @@ export default function Home() {
         <p className="brand">八字命理</p>
         <p className="hero-lead">
           以子平命理、《渊海子平》《三命通会》《滴天髓阐微》为说理依据进行四柱排盘，
-          并并置经典生物节律与历史人物相似命例（含不符合推演的反例）。大模型演算需
+          并并置经典生物节律、历史人物相似对照与历史命例库（格局教学，含不符合与资料不足）。大模型演算需
           GitHub 登录并受每日配额约束。
         </p>
       </header>
@@ -166,9 +168,13 @@ export default function Home() {
         <FiguresBrowser />
       </div>
 
+      <div className="layout-grid" style={{ marginTop: "1rem" }}>
+        <MingliCasesBrowser />
+      </div>
+
       <footer className="footnote">
-        免责声明：命理与人物匹配属传统文化与教育对照；经典 23/28/33
-        日生物节律缺乏可靠现代科学支持。人物相似不等于命运复现。本站不作医疗、法律或决策建议。
+        免责声明：命理、人物匹配与命例库属传统文化与教育对照；经典 23/28/33
+        日生物节律缺乏可靠现代科学支持。人物相似不等于命运复现；未知时辰不伪造。本站不作医疗、法律或决策建议。
         GitHub Models 已于 2026-07-30 退役，请使用 Azure AI Foundry 或其他 OpenAI 兼容接口。
         另：GitHub 上已有他仓同名项目，本仓库归属 chen-bliss，请以完整路径区分。
       </footer>
