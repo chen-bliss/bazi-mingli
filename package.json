@@ -1,0 +1,35 @@
+{
+  "name": "bazi-mingli",
+  "version": "0.1.0",
+  "private": false,
+  "description": "四柱八字排盘、子平文献依据、生物节律并置与防滥用 LLM 演算",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "smoke": "npx tsx scripts/smoke.ts",
+    "figures:enrich": "node scripts/enrich-figures.mjs"
+  },
+  "dependencies": {
+    "lunar-javascript": "^1.7.7",
+    "next": "16.2.12",
+    "next-auth": "^5.0.0-beta.32",
+    "openai": "^7.3.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.4",
+    "typescript": "^5"
+  }
+}

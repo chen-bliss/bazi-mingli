@@ -1,0 +1,3824 @@
+[
+  {
+    "id": "einstein",
+    "name": "阿尔伯特·爱因斯坦",
+    "nameEn": "Albert Einstein",
+    "era": "1879–1955",
+    "dynastyOrPeriod": "近代世界",
+    "socialClass": "学者",
+    "field": [
+      "科学",
+      "物理"
+    ],
+    "birth": {
+      "year": 1879,
+      "month": 3,
+      "day": 14,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "公历出生日期有较充分文献记载；具体出生时辰公开资料不一致，本库不采信单一时辰。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "学人型标签"
+      ]
+    },
+    "bio": "相对论创立者之一，20 世纪物理学代表性人物。",
+    "situation": "早年相对边缘，后以学术突破获得国际声誉，亦介入公共议题。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "若仅以日柱与日主五行做类比，可见‘学人’叙事常被附会为印食得力；但时辰未知，格局与用神无法坐实。成就更应归因为教育、机构与时代科学共同体，不宜当作命理验证。",
+    "classicalRefs": [
+      "滴天髓阐微：衰旺须综合得令得地得势",
+      "子平：时柱不明则难定全局"
+    ],
+    "sources": [
+      "Encyclopaedia Britannica: Albert Einstein",
+      "公开传记年表"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "德国",
+    "region": "巴登-符腾堡",
+    "birthPlace": "乌尔姆",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "若仅以日柱与日主五行做类比，可见‘学人’叙事常被附会为印食得力；但时辰未知，格局与用神无法坐实。成就更应归因为教育、机构与时代科学共同体，不宜当作命理验证。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "curie",
+    "name": "玛丽·居里",
+    "nameEn": "Marie Curie",
+    "era": "1867–1934",
+    "dynastyOrPeriod": "近代世界",
+    "socialClass": "学者",
+    "field": [
+      "科学",
+      "化学",
+      "物理"
+    ],
+    "birth": {
+      "year": 1867,
+      "month": 11,
+      "day": 7,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "华沙出生日期有文献；时辰未作为可靠字段收录。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "双重突破叙事"
+      ]
+    },
+    "bio": "放射性研究先驱，两度诺贝尔奖得主。",
+    "situation": "在性别壁垒与资源匮乏条件下坚持实验科学，后因放射相关疾病去世。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "命理附会常强调‘克中有成’；教育案例应强调社会结构与实验室条件。日主可算，全局格局因时辰缺失而证据不足。",
+    "classicalRefs": [
+      "三命通会：岁运与人事并参，不可单断"
+    ],
+    "sources": [
+      "Nobel Prize biography: Marie Curie"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "波兰/法国",
+    "region": "华沙",
+    "birthPlace": "华沙",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "命理附会常强调‘克中有成’；教育案例应强调社会结构与实验室条件。日主可算，全局格局因时辰缺失而证据不足。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "newton",
+    "name": "艾萨克·牛顿",
+    "nameEn": "Isaac Newton",
+    "era": "1643–1727",
+    "dynastyOrPeriod": "近代早期欧洲",
+    "socialClass": "学者",
+    "field": [
+      "科学",
+      "数学",
+      "物理"
+    ],
+    "birth": {
+      "year": 1643,
+      "month": 1,
+      "day": 4,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "儒略历/格里历换算后的常用公历日期；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知"
+      ]
+    },
+    "bio": "经典力学与微积分重要奠基者之一。",
+    "situation": "剑桥治学，晚年转入铸币与公共职务，学术与行政轨迹复杂。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "日期可排日柱，但缺乏可靠时辰与出生地真太阳时信息；用其‘证明’任何格局说皆过度。",
+    "classicalRefs": [
+      "渊海子平：月令提纲，时辰亦关十神结构"
+    ],
+    "sources": [
+      "Britannica: Isaac Newton"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "英国",
+    "region": "英格兰",
+    "birthPlace": "伍尔斯索普",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "日期可排日柱，但缺乏可靠时辰与出生地真太阳时信息；用其‘证明’任何格局说皆过度。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "turing",
+    "name": "艾伦·图灵",
+    "nameEn": "Alan Turing",
+    "era": "1912–1954",
+    "dynastyOrPeriod": "20 世纪",
+    "socialClass": "学者",
+    "field": [
+      "科学",
+      "计算机",
+      "数学"
+    ],
+    "birth": {
+      "year": 1912,
+      "month": 6,
+      "day": 23,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期广泛记载；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "制度性迫害语境"
+      ]
+    },
+    "bio": "现代计算与密码分析先驱。",
+    "situation": "战时密码破译贡献卓著，战后因性取向遭受法律与社会压迫。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：若以通俗‘聪明格局必享通达’推演，无法解释其遭受的制度性伤害。命理类比至多触及气质标签，解释不了法律史与社会史。",
+    "classicalRefs": [
+      "子平：吉凶系于岁运人事，非日主一语可尽"
+    ],
+    "sources": [
+      "Britannica: Alan Turing"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "英国",
+    "region": "英格兰",
+    "birthPlace": "伦敦",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：若以通俗‘聪明格局必享通达’推演，无法解释其遭受的制度性伤害。命理类比至多触及气质标签，解释不了法律史与社会史。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "lincoln",
+    "name": "亚伯拉罕·林肯",
+    "nameEn": "Abraham Lincoln",
+    "era": "1809–1865",
+    "dynastyOrPeriod": "19 世纪美国",
+    "socialClass": "政治家",
+    "field": [
+      "政治",
+      "法律"
+    ],
+    "birth": {
+      "year": 1809,
+      "month": 2,
+      "day": 12,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰众说不一，不收录。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "危机领导"
+      ]
+    },
+    "bio": "美国第 16 任总统，内战时期关键人物。",
+    "situation": "出身边疆、自学法律，任内推动废奴相关进程，遇刺身亡。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "政治事功与‘官杀权柄’意象易被附会；但其崛起高度依赖政党、战争与制度机会，命理不能替代历史解释。",
+    "classicalRefs": [
+      "三命通会：格局与岁运",
+      "滴天髓：气势顺逆"
+    ],
+    "sources": [
+      "White House Historical Association / Britannica"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "美国",
+    "region": "肯塔基",
+    "birthPlace": "霍金维尔附近",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "政治事功与‘官杀权柄’意象易被附会；但其崛起高度依赖政党、战争与制度机会，命理不能替代历史解释。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "churchill",
+    "name": "温斯顿·丘吉尔",
+    "nameEn": "Winston Churchill",
+    "era": "1874–1965",
+    "dynastyOrPeriod": "20 世纪英国",
+    "socialClass": "贵族政治家",
+    "field": [
+      "政治",
+      "军事",
+      "文学"
+    ],
+    "birth": {
+      "year": 1874,
+      "month": 11,
+      "day": 30,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未核。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "战时领袖"
+      ]
+    },
+    "bio": "英国首相，二战同盟国重要领导人，亦从事写作。",
+    "situation": "政治生涯大起大落，战时执政，战后一度下野再执政。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "‘先挫后起’常被命理叙事征用，但选举制度与战争结构才是主因。收录为高社会阶层政治样本。",
+    "classicalRefs": [
+      "渊海子平：用神得力与否须看全局"
+    ],
+    "sources": [
+      "Britannica: Winston Churchill"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "英国",
+    "region": "英格兰",
+    "birthPlace": "布莱尼姆宫",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "‘先挫后起’常被命理叙事征用，但选举制度与战争结构才是主因。收录为高社会阶层政治样本。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "sun-yat-sen",
+    "name": "孙中山",
+    "nameEn": "Sun Yat-sen",
+    "era": "1866–1925",
+    "dynastyOrPeriod": "晚清—民国",
+    "socialClass": "革命家/政治家",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 1866,
+      "month": 11,
+      "day": 12,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "香山（今中山）出生日期有通行记载；时辰说法不一。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "革命动员"
+      ]
+    },
+    "bio": "中国近代民主革命先行者。",
+    "situation": "长期流亡组织革命，民国成立后政治处境反复。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "命理读本常夸大‘帝星’‘驿马’；本库只保留日柱可计算层面，并强调革命史不能化约为八字。",
+    "classicalRefs": [
+      "子平：官杀与驿马意象不可坐实为史实因果"
+    ],
+    "sources": [
+      "中国大百科全书相关条目 / 公开年谱"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "广东",
+    "birthPlace": "香山（中山）",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "命理读本常夸大‘帝星’‘驿马’；本库只保留日柱可计算层面，并强调革命史不能化约为八字。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "luxun",
+    "name": "鲁迅",
+    "nameEn": "Lu Xun",
+    "era": "1881–1936",
+    "dynastyOrPeriod": "晚清—民国",
+    "socialClass": "文人/知识分子",
+    "field": [
+      "文学",
+      "思想"
+    ],
+    "birth": {
+      "year": 1881,
+      "month": 9,
+      "day": 25,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "周树人出生日期有家谱与年谱依据；时辰未作为高置信字段。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "批判型文人"
+      ]
+    },
+    "bio": "现代中国文学与思想史上的关键作家。",
+    "situation": "由医学转向文学，以杂文与小说介入社会批判。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "伤官、食神泄秀一类术语易被套用到杂文风格，但这是修辞类比。其影响力来自出版、同人网络与时代论争。",
+    "classicalRefs": [
+      "子平：食伤泄秀",
+      "滴天髓：气势清浊"
+    ],
+    "sources": [
+      "鲁迅年谱（通行公开资料）"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "浙江",
+    "birthPlace": "绍兴",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "伤官、食神泄秀一类术语易被套用到杂文风格，但这是修辞类比。其影响力来自出版、同人网络与时代论争。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "zhou-enlai",
+    "name": "周恩来",
+    "era": "1898–1976",
+    "dynastyOrPeriod": "近现代中国",
+    "socialClass": "政治家",
+    "field": [
+      "政治",
+      "外交"
+    ],
+    "birth": {
+      "year": 1898,
+      "month": 3,
+      "day": 5,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有公开记载；时辰不收录。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "行政协调型"
+      ]
+    },
+    "bio": "中华人民共和国开国领导人之一，长期主持政务与外交。",
+    "situation": "在复杂政治结构中长期担任协调与执行角色。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "高政治人物最易被神化附会。本库仅提供日柱层面的结构化标签，明确拒绝‘命定建国’叙述。",
+    "classicalRefs": [
+      "三命通会：人事与命理须分疏"
+    ],
+    "sources": [
+      "公开年谱与辞书条目"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "江苏",
+    "birthPlace": "淮安",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "高政治人物最易被神化附会。本库仅提供日柱层面的结构化标签，明确拒绝‘命定建国’叙述。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "deng-xiaoping",
+    "name": "邓小平",
+    "era": "1904–1997",
+    "dynastyOrPeriod": "近现代中国",
+    "socialClass": "政治家",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 1904,
+      "month": 8,
+      "day": 22,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期通行；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "改革决策"
+      ]
+    },
+    "bio": "改革开放主要决策者之一。",
+    "situation": "政治生涯多次起落，晚年推动经济改革与开放。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "‘先抑后扬’叙事与命理岁运话术高度同构，故特别容易伪验证。匹配仅作结构相似参考。",
+    "classicalRefs": [
+      "滴天髓：顺逆气势",
+      "子平：用神与岁运"
+    ],
+    "sources": [
+      "公开年谱"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "四川",
+    "birthPlace": "广安",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "‘先抑后扬’叙事与命理岁运话术高度同构，故特别容易伪验证。匹配仅作结构相似参考。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "mao-zedong",
+    "name": "毛泽东",
+    "era": "1893–1976",
+    "dynastyOrPeriod": "近现代中国",
+    "socialClass": "政治家",
+    "field": [
+      "政治",
+      "军事",
+      "文学"
+    ],
+    "birth": {
+      "year": 1893,
+      "month": 12,
+      "day": 26,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有公开记载；民间时辰传说多，本库一律标未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "日主明确",
+        "时辰未知",
+        "高权政治"
+      ]
+    },
+    "bio": "中国共产党与中华人民共和国主要缔造者之一。",
+    "situation": "长期领导革命与建国后政治，历史评价高度复杂。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例导向：任何试图用八字‘必然推出’重大历史路径的说法，都忽略组织、战争、国际格局。日柱可算不等于史实可推。",
+    "classicalRefs": [
+      "子平命理边界：象义类比≠历史因果"
+    ],
+    "sources": [
+      "公开年谱与辞书"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "湖南",
+    "birthPlace": "湘潭韶山",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例导向：任何试图用八字‘必然推出’重大历史路径的说法，都忽略组织、战争、国际格局。日柱可算不等于史实可推。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "caesar",
+    "name": "尤利乌斯·凯撒",
+    "nameEn": "Julius Caesar",
+    "era": "前 100–前 44",
+    "dynastyOrPeriod": "罗马共和国晚期",
+    "socialClass": "贵族军人政治家",
+    "field": [
+      "政治",
+      "军事"
+    ],
+    "birth": {
+      "year": -100,
+      "month": 7,
+      "day": 12,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统记载约前 100 年 7 月；古代历法换算存在争议，仅作低置信文化样本。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "高权政治",
+        "军事扩张",
+        "资料争议"
+      ],
+      "shiShenTendency": [
+        "官杀意象",
+        "比劫争胜意象"
+      ]
+    },
+    "bio": "罗马共和国末期军事统帅与政治改革者。",
+    "situation": "征服高卢、内战夺权，最终遇刺。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "古代出生记录不足以支撑现代八字排盘。列入库是为覆盖古典地中海政治—军事阶层，不作日主匹配高权重。",
+    "classicalRefs": [
+      "资料不足则阙疑"
+    ],
+    "sources": [
+      "Britannica: Julius Caesar"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "古罗马",
+    "region": "意大利半岛",
+    "birthPlace": "罗马",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "古代出生记录不足以支撑现代八字排盘。列入库是为覆盖古典地中海政治—军事阶层，不作日主匹配高权重。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "confucius",
+    "name": "孔子",
+    "era": "前 551–前 479（传统说法）",
+    "dynastyOrPeriod": "春秋",
+    "socialClass": "士人",
+    "field": [
+      "思想",
+      "教育"
+    ],
+    "birth": {
+      "year": -551,
+      "month": null,
+      "day": null,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "uncertain",
+      "note": "生年有传统说法与学术讨论；月日时辰无法可靠还原为公历精确排盘。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "教化型士人",
+        "周游不遇",
+        "资料不足"
+      ],
+      "shiShenTendency": [
+        "正印",
+        "正官意象"
+      ]
+    },
+    "bio": "儒家学派宗师，对中国及东亚思想影响深远。",
+    "situation": "长期求仕未大用，以私学与整理文献传世。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：按后世附会‘圣人之命必贵显’，孔子生前政治并不通达。说明文化成就与官贵格局叙事脱节。",
+    "classicalRefs": [
+      "史实优先于命书附会"
+    ],
+    "sources": [
+      "史记·孔子世家（传统）",
+      "现代史学讨论"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "鲁国/山东",
+    "birthPlace": "曲阜附近",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：按后世附会‘圣人之命必贵显’，孔子生前政治并不通达。说明文化成就与官贵格局叙事脱节。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "qu-yuan",
+    "name": "屈原",
+    "era": "约前 340–前 278",
+    "dynastyOrPeriod": "战国",
+    "socialClass": "贵族大夫",
+    "field": [
+      "文学",
+      "政治"
+    ],
+    "birth": {
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "unknown",
+      "note": "确切出生年月日不可考。",
+      "birthCertainty": "legendary"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "忠而见谤",
+        "辞赋传统",
+        "资料不足"
+      ],
+      "shiShenTendency": [
+        "伤官",
+        "正官冲突意象"
+      ]
+    },
+    "bio": "楚辞代表作家，楚国政治家。",
+    "situation": "主张改革遭谗见疏，流放后传说投江。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "文学史样本。无法排盘，却常见被后人硬套八字故事，故标为资料不足。",
+    "classicalRefs": [
+      "阙疑"
+    ],
+    "sources": [
+      "史记·屈原贾生列传"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "楚国/湖北一带",
+    "birthPlace": "丹阳一带（传统说法）",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "文学史样本。无法排盘，却常见被后人硬套八字故事，故标为资料不足。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "sima-qian",
+    "name": "司马迁",
+    "era": "约前 145–前 86",
+    "dynastyOrPeriod": "西汉",
+    "socialClass": "史官",
+    "field": [
+      "文学",
+      "史学"
+    ],
+    "birth": {
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "year": -145,
+      "note": "生年约数；月日时未知。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "刑余著史",
+        "史官传统"
+      ],
+      "shiShenTendency": [
+        "伤官",
+        "偏印"
+      ]
+    },
+    "bio": "《史记》作者。",
+    "situation": "遭宫刑后发愤完成通史，影响中国史学书写。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：巨大文化贡献伴随极度屈辱与身体伤害。‘文贵’推演无法美化或解释其苦难，只适合作为人文对照。",
+    "classicalRefs": [
+      "滴天髓：清浊与气势不可简化为福报"
+    ],
+    "sources": [
+      "史记·太史公自序"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "陕西",
+    "birthPlace": "龙门（韩城）",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：巨大文化贡献伴随极度屈辱与身体伤害。‘文贵’推演无法美化或解释其苦难，只适合作为人文对照。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "zhuge-liang",
+    "name": "诸葛亮",
+    "era": "181–234",
+    "dynastyOrPeriod": "东汉末—三国",
+    "socialClass": "士大夫/丞相",
+    "field": [
+      "政治",
+      "军事"
+    ],
+    "birth": {
+      "year": 181,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年约 181；月日时不可可靠确定。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "鞠躬尽瘁",
+        "托孤权臣",
+        "资料不足"
+      ],
+      "shiShenTendency": [
+        "正官",
+        "正印"
+      ]
+    },
+    "bio": "蜀汉丞相，政治家与军事策划者。",
+    "situation": "辅佐刘备、刘禅，多次北伐，五丈原病逝。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "小说与民间命理对其八字传说极多，多不可核。本库拒绝伪时辰，只保留阶层与事业标签供弱匹配。",
+    "classicalRefs": [
+      "时辰未知则格局不可妄定"
+    ],
+    "sources": [
+      "三国志·诸葛亮传"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "山东/琅邪",
+    "birthPlace": "阳都（传统）",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "小说与民间命理对其八字传说极多，多不可核。本库拒绝伪时辰，只保留阶层与事业标签供弱匹配。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "li-bai",
+    "name": "李白",
+    "era": "701–762",
+    "dynastyOrPeriod": "唐代",
+    "socialClass": "文人",
+    "field": [
+      "文学"
+    ],
+    "birth": {
+      "year": 701,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年传统为长安元年；具体月日时有争议传说，不收录。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "浪漫诗风",
+        "漫游",
+        "仕途蹭蹬"
+      ],
+      "shiShenTendency": [
+        "食神",
+        "伤官",
+        "偏财意象"
+      ]
+    },
+    "bio": "盛唐诗人，后世称诗仙。",
+    "situation": "供奉翰林而不久，后卷入永王事件，流放又遇赦。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "‘食伤泄秀而官运不稳’常被用来描述其轨迹，属于文学化类比。精确排盘不可得。",
+    "classicalRefs": [
+      "子平：食伤与官杀关系"
+    ],
+    "sources": [
+      "新唐书/旧唐书相关传记传统记载"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "碎叶/蜀地关联",
+    "birthPlace": "碎叶城一带（传统）",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "‘食伤泄秀而官运不稳’常被用来描述其轨迹，属于文学化类比。精确排盘不可得。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "du-fu",
+    "name": "杜甫",
+    "era": "712–770",
+    "dynastyOrPeriod": "唐代",
+    "socialClass": "文人/下层官员",
+    "field": [
+      "文学"
+    ],
+    "birth": {
+      "year": 712,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年大致可考，月日时不确。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "忧时诗史",
+        "仕途困顿",
+        "战乱流离"
+      ],
+      "shiShenTendency": [
+        "正官",
+        "正印",
+        "七杀压力意象"
+      ]
+    },
+    "bio": "盛唐至中唐诗人，后世称诗圣。",
+    "situation": "长期贫病流离，诗歌深刻反映安史之乱社会创伤。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：极高文学史地位与长期困顿并存。说明‘才名’与‘禄命通达’不必同步，破除简单福报论。",
+    "classicalRefs": [
+      "滴天髓：清气未必即富贵"
+    ],
+    "sources": [
+      "旧唐书/新唐书文苑传统记载"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "河南",
+    "birthPlace": "巩县",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：极高文学史地位与长期困顿并存。说明‘才名’与‘禄命通达’不必同步，破除简单福报论。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "su-shi",
+    "name": "苏轼",
+    "era": "1037–1101",
+    "dynastyOrPeriod": "北宋",
+    "socialClass": "士大夫",
+    "field": [
+      "文学",
+      "政治",
+      "艺术"
+    ],
+    "birth": {
+      "year": 1037,
+      "month": 1,
+      "day": 8,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统记载为景祐三年十二月十九；换算公历常作 1037-01-08，仍属换算近似，时辰未知。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "士大夫",
+        "屡贬仍文",
+        "打油与旷达叙事"
+      ]
+    },
+    "bio": "北宋文学家、书法家，政治上多次被贬。",
+    "situation": "乌台诗案后屡经迁谪，文学成就反而在贬谪中扩展。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "‘伤官见官’等话术常被用来讲乌台诗案，但那是事后修辞。公历换算存近似，匹配权重宜低。",
+    "classicalRefs": [
+      "三命通会：文人与官讼须看具体干支，不可口号化"
+    ],
+    "sources": [
+      "宋史本传",
+      "通行年谱换算说明"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "四川",
+    "birthPlace": "眉山",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "‘伤官见官’等话术常被用来讲乌台诗案，但那是事后修辞。公历换算存近似，匹配权重宜低。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "yue-fei",
+    "name": "岳飞",
+    "era": "1103–1142",
+    "dynastyOrPeriod": "南宋",
+    "socialClass": "军人",
+    "field": [
+      "军事"
+    ],
+    "birth": {
+      "year": 1103,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年有记载，具体时日多出传说。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "武将",
+        "忠而见杀",
+        "民族记忆符号"
+      ],
+      "shiShenTendency": [
+        "七杀",
+        "正官"
+      ]
+    },
+    "bio": "南宋抗金名将。",
+    "situation": "战功显著，后被以‘莫须有’下狱处死。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：按通俗‘将星必终享爵禄’推演失败。展示军事功勋与政治冤案可以并存。",
+    "classicalRefs": [
+      "人事权斗优先于命书断语"
+    ],
+    "sources": [
+      "宋史·岳飞传"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "河南",
+    "birthPlace": "汤阴",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：按通俗‘将星必终享爵禄’推演失败。展示军事功勋与政治冤案可以并存。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "zhu-xi",
+    "name": "朱熹",
+    "era": "1130–1200",
+    "dynastyOrPeriod": "南宋",
+    "socialClass": "士大夫/理学家",
+    "field": [
+      "思想",
+      "教育"
+    ],
+    "birth": {
+      "year": 1130,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年可考，月日时不作为高置信排盘依据。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "理学宗师",
+        "讲学",
+        "伪学党禁"
+      ],
+      "shiShenTendency": [
+        "正印",
+        "正官"
+      ]
+    },
+    "bio": "理学集大成者。",
+    "situation": "学术影响巨大，晚年亦遭政治压制。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "思想史地位与晚年党争困境并存，适合说明‘名教成功≠终身顺遂’。",
+    "classicalRefs": [
+      "子平：名气与禄位须分开看"
+    ],
+    "sources": [
+      "宋史道学相关传记"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "福建",
+    "birthPlace": "尤溪",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "思想史地位与晚年党争困境并存，适合说明‘名教成功≠终身顺遂’。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "wang-yangming",
+    "name": "王守仁（王阳明）",
+    "era": "1472–1529",
+    "dynastyOrPeriod": "明代",
+    "socialClass": "士大夫",
+    "field": [
+      "思想",
+      "军事",
+      "政治"
+    ],
+    "birth": {
+      "year": 1472,
+      "month": 10,
+      "day": 31,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统生辰换算后的常见公历日期，仍可能因历法细节存疑；时辰未知。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "事功与心学",
+        "贬谪后起"
+      ]
+    },
+    "bio": "心学代表人物，亦有平乱事功。",
+    "situation": "贬龙场后思想转折，后又因事功封爵。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "常被当作‘先挫后悟’样板。教育用途是比较士大夫阶层的多重两角色，而非证明心学由八字生成。",
+    "classicalRefs": [
+      "渊海子平：用神与调候需全局"
+    ],
+    "sources": [
+      "明史本传",
+      "通行年谱"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "浙江",
+    "birthPlace": "余姚",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "常被当作‘先挫后悟’样板。教育用途是比较士大夫阶层的多重两角色，而非证明心学由八字生成。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "hai-rui",
+    "name": "海瑞",
+    "era": "1514–1587",
+    "dynastyOrPeriod": "明代",
+    "socialClass": "中下层官员",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 1514,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年可考，时日不详。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "清官象征",
+        "犯颜直谏",
+        "仕途坎坷"
+      ],
+      "shiShenTendency": [
+        "正官",
+        "七杀",
+        "伤官见官意象"
+      ]
+    },
+    "bio": "以刚直著称的明代官员。",
+    "situation": "多次因直谏触怒权贵，清贫终老，后世符号化。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "清官形象与‘官杀两立’话术易绑定。真实仕途受明代政治生态塑造更深。",
+    "classicalRefs": [
+      "三命通会：官讼与性格标签勿等同史实"
+    ],
+    "sources": [
+      "明史·海瑞传"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "海南",
+    "birthPlace": "琼山",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "清官形象与‘官杀两立’话术易绑定。真实仕途受明代政治生态塑造更深。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "li-shizhen",
+    "name": "李时珍",
+    "era": "1518–1593",
+    "dynastyOrPeriod": "明代",
+    "socialClass": "医者/平民知识人",
+    "field": [
+      "科学",
+      "医学"
+    ],
+    "birth": {
+      "year": 1518,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年通行，月日时不确。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "本草研究",
+        "长期编纂",
+        "非高官路径"
+      ],
+      "shiShenTendency": [
+        "正印",
+        "食神"
+      ]
+    },
+    "bio": "《本草纲目》编撰者。",
+    "situation": "科举不第后专力医药，以巨著传世。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：科举失败却成就科学史地位。破除‘只有官贵格局才有大成就’的简化思维。",
+    "classicalRefs": [
+      "子平：功名与技艺路径不同"
+    ],
+    "sources": [
+      "明史及相关地方志传统记载"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "湖北",
+    "birthPlace": "蕲州",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：科举失败却成就科学史地位。破除‘只有官贵格局才有大成就’的简化思维。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "zhang-juzheng",
+    "name": "张居正",
+    "era": "1525–1582",
+    "dynastyOrPeriod": "明代",
+    "socialClass": "宰辅",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 1525,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年可考，时辰未知。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "改革权相",
+        "身后反攻倒算"
+      ],
+      "shiShenTendency": [
+        "正官",
+        "七杀",
+        "偏财"
+      ]
+    },
+    "bio": "明万历初年内阁首辅，推行一条鞭法等改革。",
+    "situation": "生前权势极盛，死后被清算。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "展示‘权高未必善终’。命理岁运话术很爱讲这类案例，故标注为部分符合并提醒事后诸葛亮风险。",
+    "classicalRefs": [
+      "滴天髓：气势过刚之戒（类比层面）"
+    ],
+    "sources": [
+      "明史·张居正传"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "湖北",
+    "birthPlace": "江陵",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "展示‘权高未必善终’。命理岁运话术很爱讲这类案例，故标注为部分符合并提醒事后诸葛亮风险。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "cao-xueqin",
+    "name": "曹雪芹",
+    "era": "约 1715–约 1763",
+    "dynastyOrPeriod": "清代",
+    "socialClass": "没落贵族文人",
+    "field": [
+      "文学"
+    ],
+    "birth": {
+      "year": 1715,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "uncertain",
+      "note": "生卒年学界仍有讨论，精确排盘条件不具备。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "世家由盛转衰",
+        "小说传世",
+        "资料争议"
+      ],
+      "shiShenTendency": [
+        "伤官",
+        "偏印",
+        "正财败象意象"
+      ]
+    },
+    "bio": "《红楼梦》作者（高置信传统看法）。",
+    "situation": "曹氏由恩宠到抄家，个人贫病中写作。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "家族败落与文学高峰并置，常被命理化为‘寒士文星’。本库强调家产罪与皇权政治才是主叙事。",
+    "classicalRefs": [
+      "子平：财宅浮沉与文章成就须分论"
+    ],
+    "sources": [
+      "红学通行年表（仍有争议）"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "北京/江南关联",
+    "birthPlace": "江宁织造背景",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "家族败落与文学高峰并置，常被命理化为‘寒士文星’。本库强调家产罪与皇权政治才是主叙事。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "zeng-guofan",
+    "name": "曾国藩",
+    "era": "1811–1872",
+    "dynastyOrPeriod": "晚清",
+    "socialClass": "士大夫/湘军统帅",
+    "field": [
+      "政治",
+      "军事",
+      "思想"
+    ],
+    "birth": {
+      "year": 1811,
+      "month": 11,
+      "day": 26,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统生辰换算后的常见日期；时辰有多种民间说法，不收录。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "中兴名臣",
+        "儒臣治军"
+      ]
+    },
+    "bio": "晚清重臣，湘军创建者，影响洋务与理学实践。",
+    "situation": "以书生领军平定太平天国，后主持地方与洋务相关事务。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "命理书高频样板。为避免循环论证，匹配时降低‘传说时辰’权重，只使用可公开日期层。",
+    "classicalRefs": [
+      "渊海子平：印比与官杀"
+    ],
+    "sources": [
+      "清史稿本传",
+      "年谱通行本"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "湖南",
+    "birthPlace": "湘乡",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "命理书高频样板。为避免循环论证，匹配时降低‘传说时辰’权重，只使用可公开日期层。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "hu-xueyan",
+    "name": "胡雪岩",
+    "era": "1823–1885",
+    "dynastyOrPeriod": "晚清",
+    "socialClass": "商人",
+    "field": [
+      "商业",
+      "金融"
+    ],
+    "birth": {
+      "year": 1823,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年通行，精确时日多出传说。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "红顶商人",
+        "盛极而衰",
+        "官商网络"
+      ],
+      "shiShenTendency": [
+        "偏财",
+        "正财",
+        "正官"
+      ]
+    },
+    "bio": "晚清著名商人，阜康钱庄等事业一度极盛。",
+    "situation": "依托官场关系快速扩张，最终破产抄家式败落。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "商业史典型‘依附权力的繁荣脆弱’。财星话术很贴，但真正机制是金融杠杆与外贸、政治风险。",
+    "classicalRefs": [
+      "子平：财旺须防官杀与比劫争财（类比）"
+    ],
+    "sources": [
+      "晚清商业史公开叙述"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "安徽/杭州经营",
+    "birthPlace": "绩溪",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "商业史典型‘依附权力的繁荣脆弱’。财星话术很贴，但真正机制是金融杠杆与外贸、政治风险。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "qi-baishi",
+    "name": "齐白石",
+    "era": "1864–1957",
+    "dynastyOrPeriod": "近现代中国",
+    "socialClass": "工匠出身艺术家",
+    "field": [
+      "艺术"
+    ],
+    "birth": {
+      "year": 1864,
+      "month": 1,
+      "day": 1,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "生年确定；具体公历月日在不同材料中或有农历换算差异，故置信中低；时辰未知。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "工匠入画",
+        "晚成"
+      ]
+    },
+    "bio": "现代中国画巨匠。",
+    "situation": "木匠出身，中年后艺事大成，享高寿与声誉。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "阶层流动样本：非士族路径成就艺术史地位。日期换算若有分歧，匹配勿过度自信。",
+    "classicalRefs": [
+      "食伤为艺术表达之常用类比"
+    ],
+    "sources": [
+      "齐白石年谱通行材料"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "湖南",
+    "birthPlace": "湘潭",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "阶层流动样本：非士族路径成就艺术史地位。日期换算若有分歧，匹配勿过度自信。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "mei-lanfang",
+    "name": "梅兰芳",
+    "era": "1894–1961",
+    "dynastyOrPeriod": "近现代中国",
+    "socialClass": "艺人",
+    "field": [
+      "艺术",
+      "戏曲"
+    ],
+    "birth": {
+      "year": 1894,
+      "month": 10,
+      "day": 22,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有较明确记载；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "表演艺术",
+        "国际传播"
+      ]
+    },
+    "bio": "京剧表演艺术大师。",
+    "situation": "把京剧推向国际舞台，抗战期间拒演等事迹广为人知。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "艺术领域与食伤类比常见。社会身份是‘艺人’而非官绅，有助于多样性匹配。",
+    "classicalRefs": [
+      "子平：食伤"
+    ],
+    "sources": [
+      "公开传记年表"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "北京/江苏关联",
+    "birthPlace": "北京",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "艺术领域与食伤类比常见。社会身份是‘艺人’而非官绅，有助于多样性匹配。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "lei-feng",
+    "name": "雷锋",
+    "era": "1940–1962",
+    "dynastyOrPeriod": "当代中国",
+    "socialClass": "士兵/普通人",
+    "field": [
+      "社会象征"
+    ],
+    "birth": {
+      "year": 1940,
+      "month": 12,
+      "day": 18,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有公开宣传与档案口径；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "普通人",
+        "道德象征",
+        "早逝"
+      ]
+    },
+    "bio": "被树立为广泛学习的道德榜样人物。",
+    "situation": "出身贫寒，服役期间因公殉职，后成为象征符号。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：短寿与巨大象征资本并存。命理‘寿元’类断言在此完全无力，适合提醒用户勿作寿命预测。",
+    "classicalRefs": [
+      "禁止以本系统推断寿夭"
+    ],
+    "sources": [
+      "公开纪念文献"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "湖南",
+    "birthPlace": "望城",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：短寿与巨大象征资本并存。命理‘寿元’类断言在此完全无力，适合提醒用户勿作寿命预测。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "shakespeare",
+    "name": "威廉·莎士比亚",
+    "nameEn": "William Shakespeare",
+    "era": "1564–1616",
+    "dynastyOrPeriod": "伊丽莎白时代",
+    "socialClass": "市民文人",
+    "field": [
+      "文学",
+      "戏剧"
+    ],
+    "birth": {
+      "year": 1564,
+      "month": 4,
+      "day": 26,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "受洗日 1564-04-26 有记录，出生日通常推定在此前数日，并非精确出生时刻。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "戏剧",
+        "市民文化",
+        "出生日期推定"
+      ],
+      "dominantWuXing": [],
+      "shiShenTendency": [
+        "食神",
+        "伤官"
+      ]
+    },
+    "bio": "英语戏剧与诗歌经典作家。",
+    "situation": "伦敦剧场文化中成名，身世细节仍有历史争论。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "受洗日≠出生时刻。不应用推定日期做高置信命理结论。",
+    "classicalRefs": [
+      "阙疑"
+    ],
+    "sources": [
+      "Britannica: William Shakespeare"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "英国",
+    "region": "英格兰",
+    "birthPlace": "斯特拉特福",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "受洗日≠出生时刻。不应用推定日期做高置信命理结论。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "van-gogh",
+    "name": "文森特·梵高",
+    "nameEn": "Vincent van Gogh",
+    "era": "1853–1890",
+    "dynastyOrPeriod": "19 世纪欧洲",
+    "socialClass": "艺术家",
+    "field": [
+      "艺术"
+    ],
+    "birth": {
+      "year": 1853,
+      "month": 3,
+      "day": 30,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "生前困顿",
+        "死后盛名"
+      ]
+    },
+    "bio": "后印象派画家。",
+    "situation": "生前销售与认可有限，精神健康与经济困难显著，死后声名大噪。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "经典反例：艺术史地位与现世禄命严重背离。匹配若相近，说明应读‘境遇对照’而非‘前途复制’。",
+    "classicalRefs": [
+      "食伤成名≠现世安稳"
+    ],
+    "sources": [
+      "Van Gogh Museum 年表"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "荷兰",
+    "region": "北布拉班特",
+    "birthPlace": "津德尔特",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "经典反例：艺术史地位与现世禄命严重背离。匹配若相近，说明应读‘境遇对照’而非‘前途复制’。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "michelangelo",
+    "name": "米开朗琪罗",
+    "nameEn": "Michelangelo",
+    "era": "1475–1564",
+    "dynastyOrPeriod": "文艺复兴",
+    "socialClass": "艺术家",
+    "field": [
+      "艺术"
+    ],
+    "birth": {
+      "year": 1475,
+      "month": 3,
+      "day": 6,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有记载；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "赞助人体系",
+        "多艺兼能"
+      ]
+    },
+    "bio": "雕塑、绘画、建筑巨匠。",
+    "situation": "依赖教廷与城邦赞助，创作环境充满政治与宗教张力。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "成就高度依赖赞助制度。八字无法解释西斯廷合同与美第奇政治。",
+    "classicalRefs": [
+      "人事结构优先"
+    ],
+    "sources": [
+      "Britannica: Michelangelo"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "意大利",
+    "region": "托斯卡纳",
+    "birthPlace": "卡普雷塞",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "成就高度依赖赞助制度。八字无法解释西斯廷合同与美第奇政治。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "ada-lovelace",
+    "name": "阿达·洛夫莱斯",
+    "nameEn": "Ada Lovelace",
+    "era": "1815–1852",
+    "dynastyOrPeriod": "19 世纪英国",
+    "socialClass": "贵族知识女性",
+    "field": [
+      "科学",
+      "数学",
+      "计算机史"
+    ],
+    "birth": {
+      "year": 1815,
+      "month": 12,
+      "day": 10,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "早期计算思想",
+        "性别壁垒"
+      ]
+    },
+    "bio": "常被认为是最早讨论通用计算潜能的人物之一。",
+    "situation": "在数学与工程交叉处写作，社会角色受时代性别规范约束。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "展示女性与跨领域知识人样本。避免用命理改写其被低估的社会原因。",
+    "classicalRefs": [
+      "印食类比须克制"
+    ],
+    "sources": [
+      "Britannica: Ada Lovelace"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "英国",
+    "region": "英格兰",
+    "birthPlace": "伦敦",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "展示女性与跨领域知识人样本。避免用命理改写其被低估的社会原因。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "nightingale",
+    "name": "弗洛伦斯·南丁格尔",
+    "nameEn": "Florence Nightingale",
+    "era": "1820–1910",
+    "dynastyOrPeriod": "19 世纪英国",
+    "socialClass": "改革者",
+    "field": [
+      "科学",
+      "护理",
+      "社会改革"
+    ],
+    "birth": {
+      "year": 1820,
+      "month": 5,
+      "day": 12,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "公共卫生",
+        "统计方法",
+        "职业开创"
+      ]
+    },
+    "bio": "现代护理与医院卫生改革重要推动者。",
+    "situation": "克里米亚战争中推动卫生改革，并以统计方法影响政策。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "事功来自制度与方法创新。命理不应改写为‘天生圣母’神话。",
+    "classicalRefs": [
+      "用神类比≠职业决定论"
+    ],
+    "sources": [
+      "Britannica: Florence Nightingale"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "英国",
+    "region": "托斯卡纳出生/英国活动",
+    "birthPlace": "佛罗伦萨",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "事功来自制度与方法创新。命理不应改写为‘天生圣母’神话。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "gandhi",
+    "name": "莫罕达斯·甘地",
+    "nameEn": "Mahatma Gandhi",
+    "era": "1869–1948",
+    "dynastyOrPeriod": "近现代印度",
+    "socialClass": "律师/社会运动领袖",
+    "field": [
+      "政治",
+      "社会运动"
+    ],
+    "birth": {
+      "year": 1869,
+      "month": 10,
+      "day": 2,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "非暴力运动",
+        "殖民地语境"
+      ]
+    },
+    "bio": "印度独立运动重要领袖。",
+    "situation": "以非暴力抵抗动员社会，最终遇刺。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "跨国政治样本。运动成败取决于殖民结构与动员网络，非八字单因。",
+    "classicalRefs": [
+      "岁运话术不能替代政治史"
+    ],
+    "sources": [
+      "Britannica: Mahatma Gandhi"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "印度",
+    "region": "古吉拉特",
+    "birthPlace": "博尔班达尔",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "跨国政治样本。运动成败取决于殖民结构与动员网络，非八字单因。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "mandela",
+    "name": "纳尔逊·曼德拉",
+    "nameEn": "Nelson Mandela",
+    "era": "1918–2013",
+    "dynastyOrPeriod": "20–21 世纪",
+    "socialClass": "政治家",
+    "field": [
+      "政治",
+      "法律"
+    ],
+    "birth": {
+      "year": 1918,
+      "month": 7,
+      "day": 18,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "长期囚禁",
+        "和解政治"
+      ]
+    },
+    "bio": "南非反种族隔离领袖与总统。",
+    "situation": "长期监禁后推动转型和解。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：若以‘早年通达’或‘官贵顺遂’模板衡量完全不符；其政治成就建立在长期苦难与集体运动上。",
+    "classicalRefs": [
+      "先抑后扬叙事的事后性"
+    ],
+    "sources": [
+      "Nobel Prize / Britannica"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "南非",
+    "region": "东开普",
+    "birthPlace": "姆韦佐",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：若以‘早年通达’或‘官贵顺遂’模板衡量完全不符；其政治成就建立在长期苦难与集体运动上。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "tesla",
+    "name": "尼古拉·特斯拉",
+    "nameEn": "Nikola Tesla",
+    "era": "1856–1943",
+    "dynastyOrPeriod": "近现代",
+    "socialClass": "发明家",
+    "field": [
+      "科学",
+      "工程"
+    ],
+    "birth": {
+      "year": 1856,
+      "month": 7,
+      "day": 10,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "发明",
+        "商业失败与神话化"
+      ]
+    },
+    "bio": "交流电系统重要贡献者。",
+    "situation": "技术影响巨大，商业与晚年境遇坎坷，后世被浪漫化。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：创新贡献与财富/晚景并不匹配。提醒‘偏财格局’类民间说法不可当作商业结果解释。",
+    "classicalRefs": [
+      "才成与财成须分疏"
+    ],
+    "sources": [
+      "Britannica: Nikola Tesla"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "奥匈/美国",
+    "region": "斯米连",
+    "birthPlace": "斯米连",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：创新贡献与财富/晚景并不匹配。提醒‘偏财格局’类民间说法不可当作商业结果解释。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "rockefeller",
+    "name": "约翰·D·洛克菲勒",
+    "nameEn": "John D. Rockefeller",
+    "era": "1839–1937",
+    "dynastyOrPeriod": "近现代美国",
+    "socialClass": "企业家",
+    "field": [
+      "商业",
+      "石油",
+      "慈善"
+    ],
+    "birth": {
+      "year": 1839,
+      "month": 7,
+      "day": 8,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期确定；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "垄断资本",
+        "慈善转型"
+      ]
+    },
+    "bio": "标准石油创办人，现代慈善基金会重要先驱之一。",
+    "situation": "在镀金时代积累巨富，亦面临反垄断与舆论批评。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "商业阶层样本。财富主因是产业组织与规制环境，不是八字‘财库’。",
+    "classicalRefs": [
+      "财星类比需警惕决定论"
+    ],
+    "sources": [
+      "Britannica: John D. Rockefeller"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "美国",
+    "region": "纽约州",
+    "birthPlace": "里奇福德",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "商业阶层样本。财富主因是产业组织与规制环境，不是八字‘财库’。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "tu-youyou",
+    "name": "屠呦呦",
+    "era": "1930–",
+    "dynastyOrPeriod": "当代中国",
+    "socialClass": "科研人员",
+    "field": [
+      "科学",
+      "医学"
+    ],
+    "birth": {
+      "year": 1930,
+      "month": 12,
+      "day": 30,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有公开报道；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "长期科研",
+        "集体项目中的关键发现"
+      ]
+    },
+    "bio": "青蒿素研究重要科学家，诺贝尔生理学或医学奖得主。",
+    "situation": "在特定历史条件下的科研体制中完成关键药理发现。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "当代科学样本。强调团队、文献与实验条件，拒绝‘命中注定得奖’。",
+    "classicalRefs": [
+      "印食与技艺类比须克制"
+    ],
+    "sources": [
+      "Nobel Prize biography"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "中国",
+    "region": "浙江",
+    "birthPlace": "宁波",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "当代科学样本。强调团队、文献与实验条件，拒绝‘命中注定得奖’。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "bei-dao",
+    "name": "北岛",
+    "era": "1949–",
+    "dynastyOrPeriod": "当代",
+    "socialClass": "诗人/知识分子",
+    "field": [
+      "文学"
+    ],
+    "birth": {
+      "year": 1949,
+      "month": 8,
+      "day": 2,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有公开作家资料；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "当代诗",
+        "漂泊与公共性"
+      ]
+    },
+    "bio": "朦胧诗代表诗人之一。",
+    "situation": "文学活动与时代变迁、海外经历交织。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "在世人物仅作文学领域结构化对照，不做命运预言。",
+    "classicalRefs": [
+      "对在世者尤其禁止断凶吉"
+    ],
+    "sources": [
+      "公开作家简历"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "北京",
+    "birthPlace": "北京",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "在世人物仅作文学领域结构化对照，不做命运预言。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "ban-zhao",
+    "name": "班昭",
+    "era": "约 45–约 117",
+    "dynastyOrPeriod": "东汉",
+    "socialClass": "史家/士族女性",
+    "field": [
+      "史学",
+      "教育"
+    ],
+    "birth": {
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "unknown",
+      "note": "确切出生日期不可考。",
+      "birthCertainty": "legendary"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "续成汉书",
+        "女教文本",
+        "士族家庭"
+      ],
+      "shiShenTendency": [
+        "正印",
+        "正官意象"
+      ]
+    },
+    "bio": "续写《汉书》的女史家，著有《女诫》。",
+    "situation": "在汉代士族与宫廷知识生产中发挥作用，后世评价复杂。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "补充古代知识女性样本。无法排盘，只参与弱标签匹配。",
+    "classicalRefs": [
+      "阙疑"
+    ],
+    "sources": [
+      "后汉书相关记载"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "中国",
+    "region": "陕西/扶风",
+    "birthPlace": "安陵一带",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "补充古代知识女性样本。无法排盘，只参与弱标签匹配。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "hua-mullan",
+    "name": "花木兰（传说人物）",
+    "era": "传说北朝语境",
+    "dynastyOrPeriod": "文学形象",
+    "socialClass": "平民/军士形象",
+    "field": [
+      "文学",
+      "军事形象"
+    ],
+    "birth": {
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "unknown",
+      "note": "文学与民俗形象，非可核历史出生数据。",
+      "birthCertainty": "legendary"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "代父从军",
+        "性别角色反转",
+        "传说"
+      ],
+      "shiShenTendency": [
+        "七杀",
+        "比劫"
+      ]
+    },
+    "bio": "乐府与后世戏曲中的代父从军形象。",
+    "situation": "作为文化符号被反复改编，不应当作实证命例。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例/边界样本：把传说人物当真实命盘是常见误用。收入库是为了在浏览中明确‘非史实’。",
+    "classicalRefs": [
+      "传说不可排盘"
+    ],
+    "sources": [
+      "木兰诗及后世改编史"
+    ],
+    "counterexample": true,
+    "gender": "female",
+    "country": "中国",
+    "region": "传说华北",
+    "birthPlace": "传说地（不确）",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例/边界样本：把传说人物当真实命盘是常见误用。收入库是为了在浏览中明确‘非史实’。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "zheng-he",
+    "name": "郑和",
+    "era": "1371–1433",
+    "dynastyOrPeriod": "明代",
+    "socialClass": "宦官/航海领导人",
+    "field": [
+      "军事",
+      "航海",
+      "外交"
+    ],
+    "birth": {
+      "year": 1371,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年约数，月日时不详。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "远洋外交",
+        "皇权代理人",
+        "特殊身份"
+      ],
+      "shiShenTendency": [
+        "正官",
+        "偏财",
+        "驿马意象"
+      ]
+    },
+    "bio": "明初大规模航海活动的指挥者。",
+    "situation": "七下西洋，体现明初海洋外交与后勤能力。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "身份与制度位置特殊，不能用士人官贵模板硬套。",
+    "classicalRefs": [
+      "阶层与制度优先"
+    ],
+    "sources": [
+      "明史及相关航海史综述"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "云南",
+    "birthPlace": "昆明滇池一带",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "身份与制度位置特殊，不能用士人官贵模板硬套。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "shen-kuo",
+    "name": "沈括",
+    "era": "1031–1095",
+    "dynastyOrPeriod": "北宋",
+    "socialClass": "士大夫/科学家",
+    "field": [
+      "科学",
+      "政治"
+    ],
+    "birth": {
+      "year": 1031,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年可考，时日不详。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "笔记科学",
+        "官僚与观察"
+      ],
+      "shiShenTendency": [
+        "正印",
+        "食神"
+      ]
+    },
+    "bio": "《梦溪笔谈》作者，广泛记录自然与技术观察。",
+    "situation": "仕途有起落，学术影响主要通过笔记传世。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "中国古代‘科学观察’样本，展示士人官僚与知识生产的结合。",
+    "classicalRefs": [
+      "印食类比"
+    ],
+    "sources": [
+      "宋史及相关研究综述"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "浙江",
+    "birthPlace": "钱塘",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "中国古代‘科学观察’样本，展示士人官僚与知识生产的结合。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "li-qingzhao",
+    "name": "李清照",
+    "era": "1084–约 1155",
+    "dynastyOrPeriod": "两宋",
+    "socialClass": "士族女性文人",
+    "field": [
+      "文学"
+    ],
+    "birth": {
+      "year": 1084,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年大致可考，月日时不确。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "词人",
+        "国破家亡",
+        "南渡"
+      ],
+      "shiShenTendency": [
+        "伤官",
+        "正印",
+        "正财败象意象"
+      ]
+    },
+    "bio": "宋代重要女词人。",
+    "situation": "早期生活相对安定，靖康之变后流离，词风转变。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "个人词史与北宋灭亡的宏观历史绑定。命理解释家庭变故时极易事后附会。",
+    "classicalRefs": [
+      "岁运附会风险"
+    ],
+    "sources": [
+      "宋史及相关年谱研究"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "中国",
+    "region": "山东",
+    "birthPlace": "章丘",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "个人词史与北宋灭亡的宏观历史绑定。命理解释家庭变故时极易事后附会。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "kangxi",
+    "name": "康熙帝（玄烨）",
+    "era": "1654–1722",
+    "dynastyOrPeriod": "清代",
+    "socialClass": "帝王",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 1654,
+      "month": 5,
+      "day": 4,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "帝王生辰有档案传统，但民间排盘常附加神秘时辰；本库不采用未核时辰。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "帝王样本",
+        "长时段统治"
+      ]
+    },
+    "bio": "清朝鼎盛期重要皇帝。",
+    "situation": "幼年即位，平三藩、统一台湾等重大军政议题发生在其统治期。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例导向：帝位首先是宗法与政治继承结果。用八字‘解释’为何其成为皇帝，属于典型决定论误用。",
+    "classicalRefs": [
+      "皇权继承≠命理选拔"
+    ],
+    "sources": [
+      "清实录/清史公开年表"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "北京",
+    "birthPlace": "北京紫禁城",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例导向：帝位首先是宗法与政治继承结果。用八字‘解释’为何其成为皇帝，属于典型决定论误用。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "empress-wu",
+    "name": "武则天",
+    "era": "624–705",
+    "dynastyOrPeriod": "唐代",
+    "socialClass": "帝王",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 624,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年有传统记载，具体时日多出传说。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "女主称帝",
+        "宫廷政治"
+      ],
+      "shiShenTendency": [
+        "七杀",
+        "正官",
+        "比劫"
+      ]
+    },
+    "bio": "中国历史上唯一正式称帝的女皇帝。",
+    "situation": "从才人到皇后再到称帝，政治斗争极度激烈。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "高权女性样本。精确八字不可得；任何‘女帝命’商业话术都应警惕。",
+    "classicalRefs": [
+      "资料不足则阙疑"
+    ],
+    "sources": [
+      "旧唐书/新唐书"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "中国",
+    "region": "山西",
+    "birthPlace": "文水",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "高权女性样本。精确八字不可得；任何‘女帝命’商业话术都应警惕。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "guo-moruo",
+    "name": "郭沫若",
+    "era": "1892–1978",
+    "dynastyOrPeriod": "近现代中国",
+    "socialClass": "知识分子/官员",
+    "field": [
+      "文学",
+      "学术",
+      "政治"
+    ],
+    "birth": {
+      "year": 1892,
+      "month": 11,
+      "day": 16,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有公开记载；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "文人从政",
+        "评价两极"
+      ]
+    },
+    "bio": "作家、历史学家，亦担任文化领导职务。",
+    "situation": "文学与政治角色交织，后世评价分歧显著。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "展示知识人进入体制后的复杂处境，匹配时提醒勿道德化八字。",
+    "classicalRefs": [
+      "食伤与官星并见之修辞须谨慎"
+    ],
+    "sources": [
+      "公开年谱"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "四川",
+    "birthPlace": "乐山",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "展示知识人进入体制后的复杂处境，匹配时提醒勿道德化八字。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "liang-qichao",
+    "name": "梁启超",
+    "era": "1873–1929",
+    "dynastyOrPeriod": "晚清—民国",
+    "socialClass": "士大夫/启蒙知识分子",
+    "field": [
+      "思想",
+      "政治",
+      "文学"
+    ],
+    "birth": {
+      "year": 1873,
+      "month": 2,
+      "day": 23,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有年谱依据；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "维新",
+        "报刊启蒙",
+        "流亡"
+      ]
+    },
+    "bio": "维新派代表人物与启蒙思想家。",
+    "situation": "戊戌后流亡，以报刊与著述影响一代青年。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "思想影响力与政治挫败并存。适合‘部分符合’：有事功叙事，也有流亡挫败。",
+    "classicalRefs": [
+      "三命通会：名与位"
+    ],
+    "sources": [
+      "梁启超年谱公开材料"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "广东",
+    "birthPlace": "新会",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "思想影响力与政治挫败并存。适合‘部分符合’：有事功叙事，也有流亡挫败。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "tan-sitong",
+    "name": "谭嗣同",
+    "era": "1865–1898",
+    "dynastyOrPeriod": "晚清",
+    "socialClass": "维新志士",
+    "field": [
+      "政治",
+      "思想"
+    ],
+    "birth": {
+      "year": 1865,
+      "month": 3,
+      "day": 10,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有记载；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "维新烈士",
+        "短促政治生命"
+      ]
+    },
+    "bio": "戊戌维新重要参与者。",
+    "situation": "变法失败后选择不逃，遇害。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：道德勇气与政治失败、生命终结同时成立。禁止把此类人物用作‘改命成功学’素材。",
+    "classicalRefs": [
+      "人事抉择与历史结构"
+    ],
+    "sources": [
+      "公开年谱与史著"
+    ],
+    "counterexample": true,
+    "gender": "male",
+    "country": "中国",
+    "region": "湖南",
+    "birthPlace": "浏阳",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：道德勇气与政治失败、生命终结同时成立。禁止把此类人物用作‘改命成功学’素材。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "song-qingling",
+    "name": "宋庆龄",
+    "era": "1893–1981",
+    "dynastyOrPeriod": "近现代中国",
+    "socialClass": "社会活动家/国家名誉职",
+    "field": [
+      "政治",
+      "社会"
+    ],
+    "birth": {
+      "year": 1893,
+      "month": 1,
+      "day": 27,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期有公开记载；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "跨时代政治象征",
+        "社会事业"
+      ]
+    },
+    "bio": "近代中国重要社会政治人物。",
+    "situation": "经历辛亥革命至建国后多个历史阶段，长期从事社会事业。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "在世跨度长、角色复杂，仅作结构化人物库样本，不做 retroactive 命理证明。",
+    "classicalRefs": [
+      "对复杂政治人生保持克制"
+    ],
+    "sources": [
+      "公开传记"
+    ],
+    "counterexample": false,
+    "gender": "female",
+    "country": "中国",
+    "region": "上海/广东关联",
+    "birthPlace": "上海",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "在世跨度长、角色复杂，仅作结构化人物库样本，不做 retroactive 命理证明。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "hypatia",
+    "name": "希帕蒂娅",
+    "nameEn": "Hypatia",
+    "era": "约 350–415",
+    "dynastyOrPeriod": "古代亚历山大",
+    "socialClass": "学者",
+    "field": [
+      "科学",
+      "哲学",
+      "数学"
+    ],
+    "birth": {
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "unknown",
+      "note": "出生确切日期不可考。",
+      "birthCertainty": "legendary"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "古典学者",
+        "宗教冲突受害者"
+      ],
+      "shiShenTendency": [
+        "正印",
+        "食神"
+      ]
+    },
+    "bio": "古代亚历山大的数学家与哲学家。",
+    "situation": "在宗教—政治冲突中被杀害，后世成为学术与性别象征。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：知识声誉无法保护其免于暴力政治。资料不足以排盘。",
+    "classicalRefs": [
+      "阙疑 + 反决定论"
+    ],
+    "sources": [
+      "Britannica: Hypatia"
+    ],
+    "counterexample": true,
+    "gender": "female",
+    "country": "东罗马帝国",
+    "region": "埃及亚历山大",
+    "birthPlace": "亚历山大",
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：知识声誉无法保护其免于暴力政治。资料不足以排盘。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "aviccena",
+    "name": "伊本·西那（阿维森纳）",
+    "nameEn": "Avicenna",
+    "era": "980–1037",
+    "dynastyOrPeriod": "伊斯兰黄金时代",
+    "socialClass": "学者/宫廷医师",
+    "field": [
+      "科学",
+      "医学",
+      "哲学"
+    ],
+    "birth": {
+      "year": 980,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "year-only",
+      "note": "生年约数，月日时不详。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "医学百科",
+        "宫廷知识人"
+      ],
+      "shiShenTendency": [
+        "正印",
+        "正官"
+      ]
+    },
+    "bio": "《医典》作者，影响欧亚医学传统。",
+    "situation": "在诸王朝间游走行医与著述。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "非中国文化圈学者样本，用于扩展领域多样性；不做八字硬套。",
+    "classicalRefs": [
+      "跨文化样本勿强行子平化"
+    ],
+    "sources": [
+      "Britannica: Avicenna"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "波斯/中亚",
+    "region": "布哈拉一带",
+    "birthPlace": "阿夫沙纳",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "非中国文化圈学者样本，用于扩展领域多样性；不做八字硬套。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "zheng-banqiao",
+    "name": "郑板桥",
+    "era": "1693–1766",
+    "dynastyOrPeriod": "清代",
+    "socialClass": "士大夫/艺术家",
+    "field": [
+      "艺术",
+      "文学",
+      "政治"
+    ],
+    "birth": {
+      "year": 1693,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "year-only",
+      "note": "生年可考，时日不详。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "罢官卖画",
+        "扬州画派"
+      ],
+      "shiShenTendency": [
+        "伤官",
+        "正官",
+        "偏财"
+      ]
+    },
+    "bio": "清代书画家，“扬州八怪”代表人物之一。",
+    "situation": "曾任县令，后辞官以书画为生。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "官场退出转向艺事的路径，常被说成伤官制官或弃官就艺，属类比。",
+    "classicalRefs": [
+      "食伤与官的关系"
+    ],
+    "sources": [
+      "清史及相关方志记述"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "江苏",
+    "birthPlace": "兴化",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "官场退出转向艺事的路径，常被说成伤官制官或弃官就艺，属类比。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "lin-zexu",
+    "name": "林则徐",
+    "era": "1785–1850",
+    "dynastyOrPeriod": "晚清",
+    "socialClass": "士大夫",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 1785,
+      "month": 8,
+      "day": 30,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统生辰换算后的常见日期；时辰未知。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "禁烟",
+        "边疆遣戍",
+        "经世"
+      ]
+    },
+    "bio": "晚清大臣，虎门销烟代表人物。",
+    "situation": "因禁烟与中英冲突被遣戍，后又起用。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "民族英雄叙事与遣戍挫折并存。日期换算置信有限，匹配时勿过度坐实格局。",
+    "classicalRefs": [
+      "三命通会：名位与风波"
+    ],
+    "sources": [
+      "清史稿本传",
+      "通行年谱"
+    ],
+    "counterexample": false,
+    "gender": "male",
+    "country": "中国",
+    "region": "福建",
+    "birthPlace": "侯官",
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "民族英雄叙事与遣戍挫折并存。日期换算置信有限，匹配时勿过度坐实格局。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "qiu-jin",
+    "name": "秋瑾",
+    "nameEn": "Qiu Jin",
+    "gender": "female",
+    "era": "1875–1907",
+    "dynastyOrPeriod": "晚清",
+    "country": "中国",
+    "region": "浙江",
+    "birthPlace": "厦门出生、绍兴成长",
+    "socialClass": "士族女性革命者",
+    "field": [
+      "政治",
+      "文学",
+      "社会运动"
+    ],
+    "birth": {
+      "year": 1875,
+      "month": 11,
+      "day": 8,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "公历生卒常见于年谱；时辰未作为可靠字段收录。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "女杰",
+        "革命牺牲",
+        "诗文并传"
+      ]
+    },
+    "bio": "晚清女革命家、诗人，倡导妇女解放。",
+    "situation": "留学日本后投身反清活动，就义于绍兴。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "常被附会为‘杀破狼式烈性’叙事。教育用途应强调性别与政治结构压力，而非用神验证。",
+    "classicalRefs": [
+      "子平：官杀与性情标签不可等同革命史"
+    ],
+    "sources": [
+      "秋瑾年谱通行材料",
+      "清史相关公开叙述"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "常被附会为‘杀破狼式烈性’叙事。教育用途应强调性别与政治结构压力，而非用神验证。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "darwin",
+    "name": "查尔斯·达尔文",
+    "nameEn": "Charles Darwin",
+    "gender": "male",
+    "era": "1809–1882",
+    "dynastyOrPeriod": "19 世纪英国",
+    "country": "英国",
+    "region": "英格兰",
+    "birthPlace": "什鲁斯伯里",
+    "socialClass": "士绅学者",
+    "field": [
+      "科学",
+      "生物学"
+    ],
+    "birth": {
+      "year": 1809,
+      "month": 2,
+      "day": 12,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期文献充分；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "长期观察",
+        "理论突破",
+        "争议与接受并存"
+      ]
+    },
+    "bio": "进化论主要奠基者之一。",
+    "situation": "环球航行后长期整理证据，晚年开始广泛影响生物学与社会思想。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "‘印食生慧’类比易套用。科学革命更依赖航海、标本网络与同行评议制度。",
+    "classicalRefs": [
+      "滴天髓：才学须看印食，亦须看际遇"
+    ],
+    "sources": [
+      "Britannica: Charles Darwin"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "‘印食生慧’类比易套用。科学革命更依赖航海、标本网络与同行评议制度。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "frida-kahlo",
+    "name": "弗里达·卡罗",
+    "nameEn": "Frida Kahlo",
+    "gender": "female",
+    "era": "1907–1954",
+    "dynastyOrPeriod": "20 世纪拉美",
+    "country": "墨西哥",
+    "region": "墨西哥城",
+    "birthPlace": "科约阿坎",
+    "socialClass": "艺术家",
+    "field": [
+      "艺术"
+    ],
+    "birth": {
+      "year": 1907,
+      "month": 7,
+      "day": 6,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期通行；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "伤痛与创作",
+        "身份政治",
+        "自传性绘画"
+      ]
+    },
+    "bio": "墨西哥现代艺术代表人物，以自画像闻名。",
+    "situation": "车祸与慢性病背景下坚持创作，作品成为拉美与女性主义视觉符号。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "伤官、疾厄类附会常见。反确认偏误提醒：身体创伤与艺术语言的关系不能简化为格局断语。",
+    "classicalRefs": [
+      "三命通会：疾厄与才艺须分论"
+    ],
+    "sources": [
+      "Frida Kahlo Museum / 公开传记年表"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "伤官、疾厄类附会常见。反确认偏误提醒：身体创伤与艺术语言的关系不能简化为格局断语。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "tagore",
+    "name": "罗宾德拉纳特·泰戈尔",
+    "nameEn": "Rabindranath Tagore",
+    "gender": "male",
+    "era": "1861–1941",
+    "dynastyOrPeriod": "近现代南亚",
+    "country": "印度",
+    "region": "孟加拉",
+    "birthPlace": "加尔各答",
+    "socialClass": "士绅文人",
+    "field": [
+      "文学",
+      "教育",
+      "思想"
+    ],
+    "birth": {
+      "year": 1861,
+      "month": 5,
+      "day": 7,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期通行；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "诗哲",
+        "跨文化影响",
+        "教育实验"
+      ]
+    },
+    "bio": "孟加拉语文学巨匠，亚洲首位诺贝尔文学奖得主。",
+    "situation": "以诗歌、戏剧与教育实践影响南亚现代文化，并参与公共思想论争。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "食伤生秀的叙事易贴合，但殖民语境下的文化资本同样关键。",
+    "classicalRefs": [
+      "食伤为文艺表达之常用类比"
+    ],
+    "sources": [
+      "Nobel Prize biography: Rabindranath Tagore"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "食伤生秀的叙事易贴合，但殖民语境下的文化资本同样关键。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "martin-luther",
+    "name": "马丁·路德",
+    "nameEn": "Martin Luther",
+    "gender": "male",
+    "era": "1483–1546",
+    "dynastyOrPeriod": "宗教改革时代",
+    "country": "德意志",
+    "region": "萨克森-安哈尔特",
+    "birthPlace": "艾斯莱本",
+    "socialClass": "教士/改革者",
+    "field": [
+      "宗教",
+      "思想"
+    ],
+    "birth": {
+      "year": 1483,
+      "month": 11,
+      "day": 10,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "传统记载生日；时辰未知。儒略/格里换算在早期文献中需注意。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "宗教改革",
+        "对抗权威",
+        "印刷传播"
+      ]
+    },
+    "bio": "宗教改革关键人物，《九十五条论纲》传统关联者。",
+    "situation": "挑战罗马教廷权威，引发欧洲宗教与政治重组。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "七杀、伤官见官一类附会极常见。印刷术与诸侯政治才是扩散主因；标为部分符合以防神话化。",
+    "classicalRefs": [
+      "子平：官杀战与叛逆标签勿直接史实化"
+    ],
+    "sources": [
+      "Britannica: Martin Luther"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "七杀、伤官见官一类附会极常见。印刷术与诸侯政治才是扩散主因；标为部分符合以防神话化。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "catherine-great",
+    "name": "叶卡捷琳娜二世",
+    "nameEn": "Catherine the Great",
+    "gender": "female",
+    "era": "1729–1796",
+    "dynastyOrPeriod": "俄罗斯帝国",
+    "country": "俄罗斯",
+    "region": "普鲁士出生/俄国统治",
+    "birthPlace": "斯德丁（今什切青）",
+    "socialClass": "帝王",
+    "field": [
+      "政治"
+    ],
+    "birth": {
+      "year": 1729,
+      "month": 5,
+      "day": 2,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期通行；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "女主执政",
+        "开明专制争议",
+        "宫廷政变上位"
+      ]
+    },
+    "bio": "俄罗斯帝国女皇，以扩张与开明专制形象著称。",
+    "situation": "以外戚身份经政变掌权，长期主导帝国内外政策。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "女帝案例常被用来‘证明’某类阳刚格局。本库强调宫廷派系与地缘政治，反对单一命理解释。",
+    "classicalRefs": [
+      "三命通会：女命官星说须历史化阅读"
+    ],
+    "sources": [
+      "Britannica: Catherine the Great"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "女帝案例常被用来‘证明’某类阳刚格局。本库强调宫廷派系与地缘政治，反对单一命理解释。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "george-washington",
+    "name": "乔治·华盛顿",
+    "nameEn": "George Washington",
+    "gender": "male",
+    "era": "1732–1799",
+    "dynastyOrPeriod": "18 世纪北美",
+    "country": "美国",
+    "region": "弗吉尼亚",
+    "birthPlace": "威斯特摩兰县",
+    "socialClass": "种植园主/军人政治家",
+    "field": [
+      "政治",
+      "军事"
+    ],
+    "birth": {
+      "year": 1732,
+      "month": 2,
+      "day": 22,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "公历换算后的常用生日；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "建国领袖",
+        "自愿交权",
+        "军人从政"
+      ]
+    },
+    "bio": "美国开国元勋，首任总统。",
+    "situation": "领导独立战争后两次出任总统并开创和平交权先例。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "正官得位叙事极易事后附会。制度设计与精英联盟更关键；勿当作‘交权格局’证明。",
+    "classicalRefs": [
+      "渊海子平：官星清浊与权位须分看"
+    ],
+    "sources": [
+      "Britannica: George Washington"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "正官得位叙事极易事后附会。制度设计与精英联盟更关键；勿当作‘交权格局’证明。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "frederick-douglass",
+    "name": "弗雷德里克·道格拉斯",
+    "nameEn": "Frederick Douglass",
+    "gender": "male",
+    "era": "约 1818–1895",
+    "dynastyOrPeriod": "19 世纪美国",
+    "country": "美国",
+    "region": "马里兰",
+    "birthPlace": "塔尔博特县",
+    "socialClass": "奴隶出身社会活动家",
+    "field": [
+      "社会运动",
+      "文学",
+      "政治"
+    ],
+    "birth": {
+      "year": 1818,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "year-only",
+      "note": "出生于奴隶制下，精确月日不确；自述约 1818 年。",
+      "birthCertainty": "year-only"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "奴隶解放",
+        "演说与自传",
+        "阶层跃迁"
+      ],
+      "shiShenTendency": [
+        "伤官",
+        "正印",
+        "七杀"
+      ]
+    },
+    "bio": "废奴运动领袖、作家与演说家。",
+    "situation": "逃出奴隶制后成为公共知识分子，推动废奴与民权。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：精确出生信息缺失却成就巨大公共影响力。说明社会结构与能动性不能被‘日柱命运’替代。",
+    "classicalRefs": [
+      "子平：无确切生辰则不可硬排格局"
+    ],
+    "sources": [
+      "National Park Service / Douglass 公开传记"
+    ],
+    "counterexample": true,
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：精确出生信息缺失却成就巨大公共影响力。说明社会结构与能动性不能被‘日柱命运’替代。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "murasaki",
+    "name": "紫式部",
+    "nameEn": "Murasaki Shikibu",
+    "gender": "female",
+    "era": "约 973–约 1014",
+    "dynastyOrPeriod": "日本平安时代",
+    "country": "日本",
+    "region": "京都",
+    "birthPlace": "平安京",
+    "socialClass": "宫廷女官/文人",
+    "field": [
+      "文学"
+    ],
+    "birth": {
+      "year": 973,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "uncertain",
+      "note": "生年约为学界估计，不可精确排盘。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "宫廷女性书写",
+        "长篇小说传统",
+        "生年争议"
+      ],
+      "shiShenTendency": [
+        "食神",
+        "伤官",
+        "正印"
+      ]
+    },
+    "bio": "《源氏物语》作者（传统认定）。",
+    "situation": "以宫廷女官身份留下古典物语巅峰之作。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "东亚女性文学史关键样本，但生辰不可考，禁止伪造时柱参与高置信匹配。",
+    "classicalRefs": [
+      "渊海子平：时辰不明难定全局"
+    ],
+    "sources": [
+      "日本古典文学研究通行概述"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "东亚女性文学史关键样本，但生辰不可考，禁止伪造时柱参与高置信匹配。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "sejong",
+    "name": "世宗大王",
+    "nameEn": "Sejong the Great",
+    "gender": "male",
+    "era": "1397–1450",
+    "dynastyOrPeriod": "朝鲜王朝",
+    "country": "朝鲜",
+    "region": "汉阳",
+    "birthPlace": "汉阳",
+    "socialClass": "帝王",
+    "field": [
+      "政治",
+      "科学",
+      "教育"
+    ],
+    "birth": {
+      "year": 1397,
+      "month": 5,
+      "day": 15,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统纪年换算后的常见日期；历法细节存研究空间，置信中低。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "创制文字",
+        "民生与科学政策",
+        "儒家君主形象"
+      ]
+    },
+    "bio": "朝鲜王朝君主，推动训民正音等文化工程。",
+    "situation": "在集权王权框架下推动文字、天文与农业相关政策。",
+    "fitAssessment": "部分符合",
+    "analysisNotes": "‘文昌印星’附会常见。文字政策是制度与儒臣群体协作产物，勿单归命主。",
+    "classicalRefs": [
+      "滴天髓：君相造命说须历史化"
+    ],
+    "sources": [
+      "韩国史公开综述 / Britannica: Sejong"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "‘文昌印星’附会常见。文字政策是制度与儒臣群体协作产物，勿单归命主。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "rumi",
+    "name": "鲁米",
+    "nameEn": "Rumi",
+    "gender": "male",
+    "era": "1207–1273",
+    "dynastyOrPeriod": "中世纪伊斯兰世界",
+    "country": "波斯/安纳托利亚",
+    "region": "巴尔赫—科尼亚",
+    "birthPlace": "巴尔赫一带（传统）",
+    "socialClass": "苏菲导师/诗人",
+    "field": [
+      "宗教",
+      "文学"
+    ],
+    "birth": {
+      "year": 1207,
+      "month": 9,
+      "day": 30,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统纪念日期广泛流传；历史精确性仍有讨论，故置信偏低。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "苏菲诗歌",
+        "跨语言传播",
+        "精神导师"
+      ]
+    },
+    "bio": "波斯语苏菲诗歌代表人物。",
+    "situation": "迁徙至科尼亚后形成影响深远的精神与文学传统。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "出生细节争议大；只作宗教文学领域弱标签对照，不作文盲式格局断言。",
+    "classicalRefs": [
+      "子平：生辰不确则不可强断"
+    ],
+    "sources": [
+      "Britannica: Rumi"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "出生细节争议大；只作宗教文学领域弱标签对照，不作文盲式格局断言。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "joan-of-arc",
+    "name": "圣女贞德",
+    "nameEn": "Joan of Arc",
+    "gender": "female",
+    "era": "约 1412–1431",
+    "dynastyOrPeriod": "英法百年战争",
+    "country": "法国",
+    "region": "洛林",
+    "birthPlace": "栋雷米",
+    "socialClass": "农民/军事象征",
+    "field": [
+      "军事",
+      "宗教"
+    ],
+    "birth": {
+      "year": 1412,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "uncertain",
+      "note": "出生约 1412，精确月日不确。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "底层跃升",
+        "宗教异象叙事",
+        "军事动员符号"
+      ],
+      "shiShenTendency": [
+        "七杀",
+        "正印",
+        "伤官"
+      ]
+    },
+    "bio": "百年战争中的法国军事与宗教象征人物。",
+    "situation": "以平民少女身份参与军政动员，后被处决，近世封圣。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：生辰粗糙却被后世极度命理化。战争、王朝合法性与宗教裁判所机制才是主叙事。",
+    "classicalRefs": [
+      "三命通会：神异叙事不可替代史料"
+    ],
+    "sources": [
+      "Britannica: Joan of Arc"
+    ],
+    "counterexample": true,
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：生辰粗糙却被后世极度命理化。战争、王朝合法性与宗教裁判所机制才是主叙事。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "huang-daopo",
+    "name": "黄道婆",
+    "nameEn": "Huang Daopo",
+    "gender": "female",
+    "era": "约 1245–约 1330",
+    "dynastyOrPeriod": "宋元之际",
+    "country": "中国",
+    "region": "海南/上海松江",
+    "birthPlace": "松江乌泥泾（传统）",
+    "socialClass": "平民工匠",
+    "field": [
+      "工程",
+      "商业"
+    ],
+    "birth": {
+      "year": 1245,
+      "hour": null,
+      "calendar": "traditional-approx",
+      "precision": "uncertain",
+      "note": "生卒多为后世追述，精确日期不可考。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "dayMaster": "不明",
+      "strength": "不明",
+      "hourKnown": false,
+      "source": "curated",
+      "confidence": "low",
+      "patternTags": [
+        "棉纺织技术传播",
+        "平民女性",
+        "技艺改善民生"
+      ],
+      "shiShenTendency": [
+        "食神",
+        "偏财",
+        "正印"
+      ]
+    },
+    "bio": "传统记载中推动棉纺织技术传播的关键人物。",
+    "situation": "以工匠知识改善江南棉业，后世立祠纪念。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：几乎无可靠生辰，却在技术史上地位明确。破除‘必须有贵格才有社会贡献’的偏见。",
+    "classicalRefs": [
+      "子平：技艺成就与官贵格局不可混同"
+    ],
+    "sources": [
+      "地方志与科技史公开综述"
+    ],
+    "counterexample": true,
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：几乎无可靠生辰，却在技术史上地位明确。破除‘必须有贵格才有社会贡献’的偏见。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "rosalind-franklin",
+    "name": "罗莎琳德·富兰克林",
+    "nameEn": "Rosalind Franklin",
+    "gender": "female",
+    "era": "1920–1958",
+    "dynastyOrPeriod": "20 世纪",
+    "country": "英国",
+    "region": "英格兰",
+    "birthPlace": "伦敦",
+    "socialClass": "学者",
+    "field": [
+      "科学",
+      "化学"
+    ],
+    "birth": {
+      "year": 1920,
+      "month": 7,
+      "day": 25,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "exact-date",
+      "note": "出生日期文献充分；时辰未知。",
+      "birthCertainty": "exact"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "computed",
+      "confidence": "medium",
+      "patternTags": [
+        "关键实验证据",
+        "同行承认滞后",
+        "性别结构障碍"
+      ]
+    },
+    "bio": "DNA 结构研究中的关键实验科学家。",
+    "situation": "以 X 射线衍射等工作推动分子生物学，生前未获同等公共承认。",
+    "fitAssessment": "不符合",
+    "analysisNotes": "反例：科学贡献与‘名利格局’脱节。匹配时强调制度性承认偏差，反对用八字解释荣誉分配。",
+    "classicalRefs": [
+      "滴天髓：名实不符须看时势"
+    ],
+    "sources": [
+      "Britannica: Rosalind Franklin"
+    ],
+    "counterexample": true,
+    "fitDetail": {
+      "fitsNarrative": false,
+      "tensionNotes": "反例：科学贡献与‘名利格局’脱节。匹配时强调制度性承认偏差，反对用八字解释荣誉分配。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  },
+  {
+    "id": "ibn-battuta",
+    "name": "伊本·白图泰",
+    "nameEn": "Ibn Battuta",
+    "gender": "male",
+    "era": "1304–1368/1369",
+    "dynastyOrPeriod": "中世纪伊斯兰世界",
+    "country": "摩洛哥",
+    "region": "丹吉尔",
+    "birthPlace": "丹吉尔",
+    "socialClass": "学者/旅行家",
+    "field": [
+      "史学",
+      "宗教",
+      "外交"
+    ],
+    "birth": {
+      "year": 1304,
+      "month": 2,
+      "day": 25,
+      "hour": null,
+      "calendar": "gregorian",
+      "precision": "uncertain",
+      "note": "传统记载生日；长途游记年代学仍有考证空间。",
+      "birthCertainty": "disputed"
+    },
+    "chartTags": {
+      "hourKnown": false,
+      "source": "mixed",
+      "confidence": "low",
+      "patternTags": [
+        "长途旅行",
+        "跨文明记录",
+        "司法与朝圣网络"
+      ]
+    },
+    "bio": "中世纪著名穆斯林旅行家与游记作者。",
+    "situation": "游历亚非多地，留下重要地理与社会观察文本。",
+    "fitAssessment": "资料不足",
+    "analysisNotes": "旅行成就依赖商路、帝国驿站与宗教网络；生辰仅作弱特征。",
+    "classicalRefs": [
+      "三命通会：驿马类神须谨慎比附"
+    ],
+    "sources": [
+      "Britannica: Ibn Battuta"
+    ],
+    "counterexample": false,
+    "fitDetail": {
+      "fitsNarrative": "partial",
+      "tensionNotes": "旅行成就依赖商路、帝国驿站与宗教网络；生辰仅作弱特征。"
+    },
+    "biorhythmNote": "经典 23/28/33 日节律仅作文化对照，不构成对该人物生平的科学解释。"
+  }
+]
