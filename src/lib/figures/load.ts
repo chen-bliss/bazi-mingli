@@ -1,3 +1,5 @@
+import { GAN_WUXING, ZHI_WUXING } from "../bazi/constants";
+import { isValidCalendarDate } from "../dates";
 import { buildBaZiChart } from "@/lib/bazi";
 import raw from "../../../data/historical-figures.json";
 import { seasonalityOfZhi, yinYangOfGan } from "./features";
@@ -7,7 +9,8 @@ function precisionToCertainty(
   precision: HistoricalFigure["birth"]["precision"],
 ): BirthCertainty {
   if (precision === "exact-date") return "exact";
-  if (precision === "year-month" || precision === "year-only") return "year-only";
+  if (precision === "year-month" || precision === "year-only")
+    return "year-only";
   if (precision === "uncertain") return "disputed";
   return "legendary";
 }
@@ -15,7 +18,13 @@ function precisionToCertainty(
 function canComputeDay(fig: HistoricalFigure): boolean {
   const { year, month, day, precision, birthCertainty } = fig.birth;
   if (year == null || month == null || day == null) return false;
-  if (birthCertainty === "legendary") return false;
+  if (birthCertainty === "legendary" || birthCertainty === "year-only")
+    return false;
+  if (
+    fig.birth.calendar !== "gregorian" ||
+    !isValidCalendarDate(year, month, day)
+  )
+    return false;
   // lunar-javascript 对过早日期可能不稳
   if (year < 1600) return false;
   return precision === "exact-date" || precision === "uncertain";
@@ -63,7 +72,13 @@ export function enrichFigureRecord(fig: HistoricalFigure): HistoricalFigure {
       hour: withCertainty.birth.hour ?? 12,
       minute: 0,
     });
-    const dominant = Object.entries(chart.wuXingCount)
+    const hourKnown = withCertainty.birth.hour != null;
+    const elementCounts = { ...chart.wuXingCount };
+    if (!hourKnown) {
+      elementCounts[GAN_WUXING[chart.pillars.hour.gan]] -= 1;
+      elementCounts[ZHI_WUXING[chart.pillars.hour.zhi]] -= 1;
+    }
+    const dominant = Object.entries(elementCounts)
       .sort((a, b) => b[1] - a[1])
       .filter(([, n]) => n > 0)
       .slice(0, 2)
@@ -82,9 +97,9 @@ export function enrichFigureRecord(fig: HistoricalFigure): HistoricalFigure {
           : chart.pillars.hour.ganZhi,
       dayMasterYinYang: yinYangOfGan(chart.pillars.day.gan),
       seasonality: seasonalityOfZhi(chart.pillars.month.zhi),
-      strength: chart.strength.label,
+      strength: hourKnown ? chart.strength.label : "不明",
       dominantWuXing: dominant,
-      elementCounts: { ...chart.wuXingCount },
+      elementCounts,
       shiShenTendency: Array.from(
         new Set(
           [
@@ -105,10 +120,7 @@ export function enrichFigureRecord(fig: HistoricalFigure): HistoricalFigure {
           ? "medium"
           : "low") as ChartTags["confidence"],
       patternTags: Array.from(
-        new Set([
-          ...(withCertainty.chartTags.patternTags ?? []),
-          "日柱可计算",
-        ]),
+        new Set([...(withCertainty.chartTags.patternTags ?? []), "日柱可计算"]),
       ),
     } satisfies ChartTags;
 

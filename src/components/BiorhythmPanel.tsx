@@ -13,7 +13,7 @@ function Bar({
   phase: string;
   tone: string;
 }) {
-  const width = Math.max(4, Math.abs(percent) / 2);
+  const width = Math.abs(percent) / 2;
   const positive = percent >= 0;
   return (
     <div className="bio-row">
@@ -39,7 +39,7 @@ function Bar({
 }
 
 export function BiorhythmPanel({ data }: { data: BiorhythmResult }) {
-  const spark = data.series.slice(0, 16);
+  const spark = data.series;
   const w = 320;
   const h = 80;
   const pathFor = (key: "physical" | "emotional" | "intellectual") => {
@@ -85,7 +85,7 @@ export function BiorhythmPanel({ data }: { data: BiorhythmResult }) {
         className="bio-spark"
         viewBox={`0 0 ${w} ${h}`}
         role="img"
-        aria-label="近两周节律曲线"
+        aria-label={`从 ${data.targetDate} 起未来 ${spark.length - 1} 日节律曲线：青色体力、红色情绪、金色智力`}
       >
         <line
           x1="0"
@@ -95,11 +95,61 @@ export function BiorhythmPanel({ data }: { data: BiorhythmResult }) {
           stroke="var(--line)"
           strokeDasharray="4 4"
         />
-        <path d={pathFor("physical")} fill="none" stroke="var(--accent-teal)" strokeWidth="2" />
-        <path d={pathFor("emotional")} fill="none" stroke="var(--accent-rose)" strokeWidth="2" />
-        <path d={pathFor("intellectual")} fill="none" stroke="var(--accent-gold)" strokeWidth="2" />
+        <path
+          d={pathFor("physical")}
+          fill="none"
+          stroke="var(--accent-teal)"
+          strokeWidth="2"
+        />
+        <path
+          d={pathFor("emotional")}
+          fill="none"
+          stroke="var(--accent-rose)"
+          strokeWidth="2"
+        />
+        <path
+          d={pathFor("intellectual")}
+          fill="none"
+          stroke="var(--accent-gold)"
+          strokeWidth="2"
+        />
       </svg>
 
+      <div className="spark-caption">
+        <span>{spark[0]?.date}</span>
+        <span>{spark.at(-1)?.date}</span>
+      </div>
+      <div className="spark-legend">
+        <span className="tone-physical">体力 · 23 日</span>
+        <span className="tone-emotional">情绪 · 28 日</span>
+        <span className="tone-intellectual">智力 · 33 日</span>
+      </div>
+      <details className="calculation-note">
+        <summary>查看每日曲线数值</summary>
+        <div className="daily-values">
+          <table>
+            <caption>观测日起的节律百分比（文化趣味参考）</caption>
+            <thead>
+              <tr>
+                <th>日期</th>
+                <th>体力</th>
+                <th>情绪</th>
+                <th>智力</th>
+              </tr>
+            </thead>
+            <tbody>
+              {spark.map((point) => (
+                <tr key={point.date}>
+                  <th scope="row">{point.date}</th>
+                  <td>{(point.physical * 100).toFixed(1)}%</td>
+                  <td>{(point.emotional * 100).toFixed(1)}%</td>
+                  <td>{(point.intellectual * 100).toFixed(1)}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
       {data.criticalDaysAhead.length > 0 && (
         <p className="meta-block">
           <strong>未来临界日（趣味参考）</strong>{" "}

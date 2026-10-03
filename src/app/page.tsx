@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 import { AnalysisPanel } from "@/components/AnalysisPanel";
 import { AuthButton } from "@/components/AuthButton";
 import { BirthForm, type BirthFormValues } from "@/components/BirthForm";
@@ -8,109 +9,124 @@ import { BiorhythmPanel } from "@/components/BiorhythmPanel";
 import { ChartPanel } from "@/components/ChartPanel";
 import { FiguresBrowser } from "@/components/FiguresBrowser";
 import { MingliCasesBrowser } from "@/components/MingliCasesBrowser";
+import { KnowledgePanel } from "@/components/KnowledgePanel";
 import { MatchPanel } from "@/components/MatchPanel";
+import { buildReport } from "@/lib/report";
 import type { BaZiChart } from "@/lib/bazi";
 import type { BiorhythmResult } from "@/lib/biorhythm";
 import type { FigureMatch } from "@/lib/figures";
 
 interface QuotaInfo {
   authenticated: boolean;
+  authConfigured?: boolean;
   llmConfigured?: boolean;
   quota?: { remaining: number; limit: number; used: number };
   user?: { login?: string; name?: string | null };
 }
+interface Reading {
+  chart: BaZiChart;
+  biorhythm: BiorhythmResult;
+  matches: FigureMatch[];
+  analysis?: string;
+  mode?: "llm" | "deterministic";
+}
+
+async function loadQuota(): Promise<QuotaInfo> {
+  const res = await fetch("/api/quota", {
+    signal: AbortSignal.timeout(10_000),
+  });
+  if (!res.ok) throw new Error("配额状态暂时不可用");
+  return res.json();
+}
 
 export default function Home() {
+  const { status } = useSession();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const [chart, setChart] = useState<BaZiChart | null>(null);
-  const [biorhythm, setBiorhythm] = useState<BiorhythmResult | null>(null);
-  const [matches, setMatches] = useState<FigureMatch[]>([]);
-  const [analysis, setAnalysis] = useState("");
-  const [mode, setMode] = useState<"llm" | "deterministic">();
+  const [reading, setReading] = useState<Reading | null>(null);
   const [quota, setQuota] = useState<QuotaInfo | null>(null);
-
-  async function refreshQuota() {
-    const res = await fetch("/api/quota");
-    if (res.ok) setQuota(await res.json());
-  }
+  const [quotaError, setQuotaError] = useState("");
 
   useEffect(() => {
-    void refreshQuota();
-  }, []);
+    let active = true;
+    loadQuota()
+      .then((data) => {
+        if (active) {
+          setQuota(data);
+          setQuotaError("");
+        }
+      })
+      .catch(() => {
+        if (active) setQuotaError("登录与配额状态暂时不可用，请稍后重试。");
+      });
+    return () => {
+      active = false;
+    };
+  }, [status]);
 
-  async function runChart(values: BirthFormValues) {
+  async function run(values: BirthFormValues, action: "chart" | "analyze") {
     setBusy(true);
     setError("");
     try {
-      const res = await fetch("/api/chart", {
+      const res = await fetch(`/api/${action}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          ...values,
+          ...(action === "analyze" ? { useLlm: true } : {}),
+        }),
+        signal: AbortSignal.timeout(110_000),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "排盘失败");
-      setChart(data.chart);
-      setBiorhythm(data.biorhythm);
-      setMatches(data.matches ?? []);
-      setAnalysis("");
-      setMode(undefined);
+      const data = await res.json().catch(() => {
+        throw new Error("服务暂时不可用，请稍后重试");
+      });
+      if (!res.ok) throw new Error(data.error || "请求失败，请稍后重试");
+      setReading(data);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "排盘失败");
+      setError(
+        e instanceof Error && e.name !== "TimeoutError"
+          ? e.message
+          : "请求超时，请稍后重试",
+      );
     } finally {
+      if (action === "analyze") {
+        await loadQuota()
+          .then((data) => {
+            setQuota(data);
+            setQuotaError("");
+          })
+          .catch(() => setQuotaError("配额状态更新失败，请稍后重试。"));
+      }
       setBusy(false);
     }
   }
 
-  async function runAnalyze(values: BirthFormValues) {
-    setBusy(true);
-    setError("");
-    try {
-      const res = await fetch("/api/analyze", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, useLlm: true }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        if (data.code === "AUTH_REQUIRED") {
-          throw new Error("请先点击右上角使用 GitHub 登录，再进行 LLM 演算");
-        }
-        throw new Error(data.error || "演算失败");
-      }
-      setChart(data.chart);
-      setBiorhythm(data.biorhythm);
-      setAnalysis(data.analysis);
-      setMode(data.mode);
-      if (!matches.length) {
-        const mRes = await fetch("/api/figures/match", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(values),
-        });
-        if (mRes.ok) {
-          const mData = await mRes.json();
-          setMatches(mData.matches ?? []);
-        }
-      }
-      await refreshQuota();
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "演算失败");
-    } finally {
-      setBusy(false);
-    }
+  function downloadReport() {
+    if (!reading) return;
+    const { chart, biorhythm, matches, analysis } = reading;
+    const url = URL.createObjectURL(
+      new Blob([buildReport(chart, biorhythm, matches, analysis)], {
+        type: "text/markdown;charset=utf-8",
+      }),
+    );
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `八字研习-${chart.solarDate.slice(0, 10)}-${biorhythm.targetDate}.md`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#birth-form">
+        跳到出生信息
+      </a>
       <div className="topbar">
-        <nav>
-          <a href="#chart">排盘</a>
-          <a href="#biorhythm">节律</a>
-          <a href="#matches">相近人物</a>
+        <nav aria-label="主导航">
+          <a href="#birth-form">排盘</a>
+          <a href="#knowledge">典籍</a>
           <a href="#figures">人物库</a>
           <a href="#mingli-cases">命例库</a>
-          <a href="#analyze">演算</a>
           <a
             href="https://github.com/chen-bliss/bazi-mingli"
             target="_blank"
@@ -119,64 +135,102 @@ export default function Home() {
             GitHub
           </a>
         </nav>
-        <AuthButton />
+        <AuthButton configured={quota?.authConfigured} />
       </div>
-
       <header className="hero">
-        <p className="brand">八字命理</p>
+        <p className="eyebrow">子平文献 · 四柱结构 · 文化对照</p>
+        <h1 className="brand">八字命理</h1>
         <p className="hero-lead">
-          以子平命理、《渊海子平》《三命通会》《滴天髓阐微》为说理依据进行四柱排盘，
-          并并置经典生物节律、历史人物相似对照与历史命例库（格局教学，含不符合与资料不足）。大模型演算需
-          GitHub 登录并受每日配额约束。
+          从四柱出发，读懂干支、藏干与十神。结合经典文献研习命理结构，浏览历史人物与教学命例，保留反例与资料缺口。
         </p>
+        <div className="hero-tags">
+          <span>免费排盘</span>
+          <span>典籍研习</span>
+          <span>历史命例对照</span>
+        </div>
       </header>
-
-      <BirthForm busy={busy} onChart={runChart} onAnalyze={runAnalyze} />
-
-      {quota && (
-        <p className="status-line">
-          {quota.authenticated
-            ? `已登录${quota.user?.login ? ` @${quota.user.login}` : ""} · 今日 LLM 剩余 ${quota.quota?.remaining ?? "-"} / ${quota.quota?.limit ?? "-"}`
-            : "未登录：可排盘、节律与人物匹配；LLM 演算需 GitHub 登录"}
-          {quota.llmConfigured === false ? " · 服务端尚未配置 LLM" : ""}
+      <main>
+        <div id="birth-form">
+          <BirthForm
+            authConfigured={quota?.authConfigured}
+            busy={busy}
+            llmConfigured={quota?.llmConfigured}
+            onChart={(v) => void run(v, "chart")}
+            onAnalyze={(v) => void run(v, "analyze")}
+          />
+        </div>
+        <p className="status-line" aria-live="polite">
+          {quotaError ||
+            (quota
+              ? quota.authenticated
+                ? `已登录${quota.user?.login ? ` @${quota.user.login}` : ""} · 今日 AI 剩余 ${quota.quota?.remaining ?? "-"} / ${quota.quota?.limit ?? "-"}（UTC 00:00 重置）`
+                : quota.authConfigured === false
+                  ? "GitHub 登录尚未配置，排盘与资料浏览可正常使用。"
+                  : "排盘与资料浏览无需登录；AI 解读需 GitHub 登录。"
+              : "正在读取登录状态……")}
+          {quota?.llmConfigured === false
+            ? quota.authConfigured === false
+              ? " · 模型服务尚未配置。"
+              : " · 当前使用知识库解读，不扣每日 AI 配额。"
+            : ""}
         </p>
-      )}
-      {error && <p className="caveat">{error}</p>}
-
-      <div className="layout-grid two" id="chart">
-        {chart && <ChartPanel chart={chart} />}
-        {biorhythm && (
-          <div id="biorhythm">
-            <BiorhythmPanel data={biorhythm} />
-          </div>
+        {error && (
+          <p className="caveat" role="alert">
+            {error}
+            {reading ? " 下方仍为上一次成功计算的结果。" : ""}
+          </p>
         )}
-      </div>
-
-      {matches.length > 0 && (
-        <div className="layout-grid" id="matches" style={{ marginTop: "1rem" }}>
-          <MatchPanel matches={matches} />
+        {reading && (
+          <>
+            <div className="result-toolbar">
+              <p>
+                出生 {reading.chart.solarDate} · 观测{" "}
+                {reading.biorhythm.targetDate}
+              </p>
+              <div className="actions">
+                <button className="btn-ghost" onClick={downloadReport}>
+                  导出研习报告
+                </button>
+                <button className="btn-ghost" onClick={() => window.print()}>
+                  打印 / 保存 PDF
+                </button>
+              </div>
+            </div>
+            <div className="layout-grid two" id="chart">
+              <ChartPanel chart={reading.chart} />
+              <div id="biorhythm">
+                <BiorhythmPanel data={reading.biorhythm} />
+              </div>
+            </div>
+            {reading.matches.length > 0 && (
+              <div className="layout-grid" id="matches">
+                <MatchPanel matches={reading.matches} />
+              </div>
+            )}
+            {reading.analysis && (
+              <div className="layout-grid" id="analyze">
+                <AnalysisPanel
+                  analysis={reading.analysis}
+                  mode={reading.mode}
+                />
+              </div>
+            )}
+          </>
+        )}
+        <div className="layout-grid">
+          <KnowledgePanel />
         </div>
-      )}
-
-      {analysis && (
-        <div className="layout-grid" id="analyze" style={{ marginTop: "1rem" }}>
-          <AnalysisPanel analysis={analysis} mode={mode} />
+        <div className="layout-grid">
+          <FiguresBrowser />
         </div>
-      )}
-
-      <div className="layout-grid" style={{ marginTop: "1rem" }}>
-        <FiguresBrowser />
-      </div>
-
-      <div className="layout-grid" style={{ marginTop: "1rem" }}>
-        <MingliCasesBrowser />
-      </div>
-
+        <div className="layout-grid">
+          <MingliCasesBrowser />
+        </div>
+      </main>
       <footer className="footnote">
-        免责声明：命理、人物匹配与命例库属传统文化与教育对照；经典 23/28/33
-        日生物节律缺乏可靠现代科学支持。人物相似不等于命运复现；未知时辰不伪造。本站不作医疗、法律或决策建议。
-        GitHub Models 已于 2026-07-30 退役，请使用 Azure AI Foundry 或其他 OpenAI 兼容接口。
-        另：GitHub 上已有他仓同名项目，本仓库归属 chen-bliss，请以完整路径区分。
+        仅供传统文化与教育研习。强弱与喜用为简化规则的入门参考；人物相似不等于命运复现。经典
+        23/28/33
+        日生物节律缺乏可靠现代科学支持。本站不提供医疗、法律或投资建议。
       </footer>
     </div>
   );

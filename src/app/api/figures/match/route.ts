@@ -1,34 +1,38 @@
-import { NextRequest, NextResponse } from "next/server";
-import { buildBaZiChart } from "@/lib/bazi";
-import { calculateBiorhythm } from "@/lib/biorhythm";
 import {
-  featuresFromChart,
-  matchHistoricalFigures,
-} from "@/lib/figures";
-import { withLinkedCases } from "@/lib/mingli-cases";
+  readJsonBody,
+  requestErrorResponse,
+} from "@/lib/security/request-body";
+import { buildReading } from "@/lib/reading";
+import { NextRequest, NextResponse } from "next/server";
 import { assertHumanRequest, getClientIp } from "@/lib/security/bot-guard";
 import { consumeIpChart } from "@/lib/security/quota-store";
 import { chartRequestSchema } from "@/lib/validation";
 import { z } from "zod";
 
-const matchSchema = chartRequestSchema.extend({
+const matchSchema = chartRequestSchema.safeExtend({
   limit: z.number().int().min(1).max(12).optional().default(6),
 });
 
 export async function POST(req: NextRequest) {
   try {
-    const json = await req.json();
+    const json = await readJsonBody(req);
     const parsed = matchSchema.safeParse(json);
     if (!parsed.success) {
       return NextResponse.json(
-        { error: "参数无效", details: parsed.error.flatten() },
+        {
+          error: parsed.error.issues[0]?.message ?? "参数无效",
+          details: parsed.error.flatten(),
+        },
         { status: 400 },
       );
     }
 
     const guard = assertHumanRequest(req, parsed.data);
     if (!guard.ok) {
-      return NextResponse.json({ error: guard.error }, { status: guard.status });
+      return NextResponse.json(
+        { error: guard.error },
+        { status: guard.status },
+      );
     }
 
     const ip = getClientIp(req);
@@ -40,20 +44,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { year, month, day, hour, minute, gender, targetDate, limit } =
-      parsed.data;
-    const chart = buildBaZiChart({ year, month, day, hour, minute, gender });
-    const target = targetDate ? new Date(targetDate) : new Date();
-    const biorhythm = calculateBiorhythm({ year, month, day }, target, 14);
-    const features = featuresFromChart(chart, {
-      hourKnown: true,
-      biorhythm,
-    });
-    const matches = withLinkedCases(
-      matchHistoricalFigures(features, {
-        limit,
-        includeCounterexamples: true,
-      }),
+    const { features, matches } = buildReading(
+      parsed.data,
+      parsed.data.limit,
+      14,
     );
 
     return NextResponse.json({
@@ -64,7 +58,6 @@ export async function POST(req: NextRequest) {
       quota: { remaining: quota.remaining, limit: quota.limit },
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "匹配失败";
-    return NextResponse.json({ error: message }, { status: 500 });
+    return requestErrorResponse(error, "匹配暂时失败，请稍后重试");
   }
 }

@@ -1,18 +1,12 @@
+import {
+  readJsonBody,
+  requestErrorResponse,
+} from "@/lib/security/request-body";
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { buildBaZiChart } from "@/lib/bazi";
-import { calculateBiorhythm } from "@/lib/biorhythm";
-import { chatCompletion, isLlmConfigured } from "@/lib/llm/client";
-import {
-  buildAnalysisMessages,
-  buildDeterministicAnalysis,
-} from "@/lib/llm/prompts";
+import { analyzeReading } from "@/lib/analysis";
 import { assertHumanRequest, getClientIp } from "@/lib/security/bot-guard";
-import {
-  consumeIpLlm,
-  consumeUserDailyLlm,
-  peekUserDailyLlm,
-} from "@/lib/security/quota-store";
+import { consumeIpLlm } from "@/lib/security/quota-store";
 import { analyzeRequestSchema } from "@/lib/validation";
 
 export async function POST(req: NextRequest) {
@@ -20,23 +14,29 @@ export async function POST(req: NextRequest) {
     const session = await auth();
     if (!session?.user?.id) {
       return NextResponse.json(
-        { error: "LLM 演算需要先使用 GitHub 登录", code: "AUTH_REQUIRED" },
+        { error: "解读需要先使用 GitHub 登录", code: "AUTH_REQUIRED" },
         { status: 401 },
       );
     }
 
-    const json = await req.json();
+    const json = await readJsonBody(req);
     const parsed = analyzeRequestSchema.safeParse(json);
     if (!parsed.success) {
       return NextResponse.json(
-        { error: "参数无效", details: parsed.error.flatten() },
+        {
+          error: parsed.error.issues[0]?.message ?? "参数无效",
+          details: parsed.error.flatten(),
+        },
         { status: 400 },
       );
     }
 
     const guard = assertHumanRequest(req, parsed.data);
     if (!guard.ok) {
-      return NextResponse.json({ error: guard.error }, { status: guard.status });
+      return NextResponse.json(
+        { error: guard.error },
+        { status: guard.status },
+      );
     }
 
     const ip = getClientIp(req);
@@ -53,52 +53,32 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const userQuota = await consumeUserDailyLlm(session.user.id);
-    if (!userQuota.ok) {
+    const result = await analyzeReading(session.user.id, parsed.data);
+    if (!result.ok) {
       return NextResponse.json(
         {
-          error: "今日 LLM 演算次数已用尽",
+          error: "今日 AI 解读次数已用尽",
           remaining: 0,
-          limit: userQuota.limit,
-          resetHint: userQuota.resetHint,
+          limit: result.quota.limit,
+          resetHint: result.quota.resetHint,
           code: "DAILY_QUOTA",
         },
         { status: 429 },
       );
     }
-
-    const { year, month, day, hour, minute, gender, targetDate, question, useLlm } =
-      parsed.data;
-    const chart = buildBaZiChart({ year, month, day, hour, minute, gender });
-    const target = targetDate ? new Date(targetDate) : new Date();
-    const biorhythm = calculateBiorhythm({ year, month, day }, target, 30);
-
-    let mode: "llm" | "deterministic" = "deterministic";
-    let analysis = buildDeterministicAnalysis(chart, biorhythm);
-
-    if (useLlm && isLlmConfigured()) {
-      const messages = buildAnalysisMessages(chart, biorhythm, question);
-      analysis = await chatCompletion(messages);
-      mode = "llm";
-    } else if (useLlm && !isLlmConfigured()) {
-      analysis = `${analysis}\n\n> 服务端尚未配置 LLM_API_KEY / LLM_MODEL。GitHub Models 已于 2026-07-30 退役，请改用 Azure AI Foundry 或其它 OpenAI 兼容接口。`;
-    }
-
-    const peek = await peekUserDailyLlm(session.user.id);
-
     return NextResponse.json({
-      chart,
-      biorhythm,
-      analysis,
-      mode,
+      chart: result.chart,
+      biorhythm: result.biorhythm,
+      matches: result.matches,
+      analysis: result.analysis,
+      mode: result.mode,
       quota: {
-        userRemaining: peek.remaining,
-        userLimit: peek.limit,
+        userRemaining: result.userQuota.remaining,
+        userLimit: result.userQuota.limit,
         ipRemaining: ipQuota.remaining,
       },
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "演算失败";
-    return NextResponse.json({ error: message }, { status: 500 });
+    return requestErrorResponse(error, "演算暂时失败，请稍后重试");
   }
 }

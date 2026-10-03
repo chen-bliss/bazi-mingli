@@ -23,6 +23,11 @@ declare module "lunar-javascript" {
   }
 
   export class EightChar {
+    setSect(sect: number): void;
+    getYearHideGan(): string[];
+    getMonthHideGan(): string[];
+    getDayHideGan(): string[];
+    getTimeHideGan(): string[];
     getYear(): string;
     getMonth(): string;
     getDay(): string;

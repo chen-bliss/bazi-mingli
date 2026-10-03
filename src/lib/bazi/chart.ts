@@ -1,10 +1,6 @@
 import { Solar } from "lunar-javascript";
-import {
-  GAN_WUXING,
-  WUXING,
-  ZHI_WUXING,
-  type WuXing,
-} from "./constants";
+import { isValidCalendarDate } from "../dates";
+import { GAN_WUXING, WUXING, ZHI_WUXING, type WuXing } from "./constants";
 import type { BaZiChart, BirthInput, PillarInfo } from "./types";
 
 function buildPillar(
@@ -15,8 +11,18 @@ function buildPillar(
   wuXing: string,
   shiShenGan: string,
   shiShenZhi: string[],
+  hiddenStems: string[],
 ): PillarInfo {
-  return { ganZhi, gan, zhi, naYin, wuXing, shiShenGan, shiShenZhi };
+  return {
+    ganZhi,
+    gan,
+    zhi,
+    naYin,
+    wuXing,
+    shiShenGan,
+    shiShenZhi,
+    hiddenStems,
+  };
 }
 
 function countWuXing(pillars: BaZiChart["pillars"]): Record<WuXing, number> {
@@ -55,9 +61,9 @@ function estimateStrength(
   wuXingCount: Record<WuXing, number>,
 ): BaZiChart["strength"] {
   const same = wuXingCount[dayMasterWx];
-  const print = Object.entries(SHENG).find(([, v]) => v === dayMasterWx)?.[0] as
-    | WuXing
-    | undefined;
+  const print = Object.entries(SHENG).find(
+    ([, v]) => v === dayMasterWx,
+  )?.[0] as WuXing | undefined;
   const printScore = print ? wuXingCount[print] : 0;
   const score = same * 1.2 + printScore * 1.0;
   let label: BaZiChart["strength"]["label"] = "中和";
@@ -109,6 +115,17 @@ function classicalHints(
 
 export function buildBaZiChart(input: BirthInput): BaZiChart {
   const minute = input.minute ?? 0;
+  if (!isValidCalendarDate(input.year, input.month, input.day))
+    throw new Error("出生日期不存在");
+  if (
+    !Number.isInteger(input.hour) ||
+    input.hour < 0 ||
+    input.hour > 23 ||
+    !Number.isInteger(minute) ||
+    minute < 0 ||
+    minute > 59
+  )
+    throw new Error("出生时间无效");
   const solar = Solar.fromYmdHms(
     input.year,
     input.month,
@@ -119,6 +136,8 @@ export function buildBaZiChart(input: BirthInput): BaZiChart {
   );
   const lunar = solar.getLunar();
   const ec = lunar.getEightChar();
+  const dayBoundary = input.dayBoundary ?? "midnight";
+  ec.setSect(dayBoundary === "zi-hour" ? 1 : 2);
 
   const pillars = {
     year: buildPillar(
@@ -129,6 +148,7 @@ export function buildBaZiChart(input: BirthInput): BaZiChart {
       ec.getYearWuXing(),
       ec.getYearShiShenGan(),
       ec.getYearShiShenZhi(),
+      ec.getYearHideGan(),
     ),
     month: buildPillar(
       ec.getMonth(),
@@ -138,6 +158,7 @@ export function buildBaZiChart(input: BirthInput): BaZiChart {
       ec.getMonthWuXing(),
       ec.getMonthShiShenGan(),
       ec.getMonthShiShenZhi(),
+      ec.getMonthHideGan(),
     ),
     day: buildPillar(
       ec.getDay(),
@@ -147,6 +168,7 @@ export function buildBaZiChart(input: BirthInput): BaZiChart {
       ec.getDayWuXing(),
       "日主",
       ec.getDayShiShenZhi(),
+      ec.getDayHideGan(),
     ),
     hour: buildPillar(
       ec.getTime(),
@@ -156,6 +178,7 @@ export function buildBaZiChart(input: BirthInput): BaZiChart {
       ec.getTimeWuXing(),
       ec.getTimeShiShenGan(),
       ec.getTimeShiShenZhi(),
+      ec.getTimeHideGan(),
     ),
   };
 
@@ -165,6 +188,13 @@ export function buildBaZiChart(input: BirthInput): BaZiChart {
   const strength = estimateStrength(dayMasterWuXing, wuXingCount);
 
   return {
+    calculation: {
+      dayBoundary,
+      timeBasis:
+        "按输入公历钟表时间排盘，未校正出生地经度、真太阳时或历史夏令时。",
+      strengthMethod:
+        "八字表层干支计数：同五行×1.2＋生我五行×1.0；≤2.2偏弱，≥4.2偏强。未纳入月令权重、藏干权重与合化，不能据此定格局或用神。",
+    },
     solarDate: `${input.year}-${String(input.month).padStart(2, "0")}-${String(input.day).padStart(2, "0")} ${String(input.hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`,
     lunarDate: lunar.toString(),
     shengXiao: lunar.getYearShengXiao(),
