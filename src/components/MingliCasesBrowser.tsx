@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useCatalog, useHashSelection } from "./useCatalog";
 import type { MingliCase } from "@/lib/figures";
 
 interface Stats {
@@ -18,8 +19,13 @@ interface Stats {
 }
 
 export function MingliCasesBrowser() {
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [cases, setCases] = useState<MingliCase[]>([]);
+  const {
+    stats,
+    rows: cases,
+    busy,
+    error,
+    load: loadRows,
+  } = useCatalog<MingliCase, Stats>("/api/mingli-cases", "cases");
   const [field, setField] = useState("");
   const [fit, setFit] = useState("");
   const [gender, setGender] = useState("");
@@ -27,7 +33,7 @@ export function MingliCasesBrowser() {
   const [region, setRegion] = useState("");
   const [era, setEra] = useState("");
   const [q, setQ] = useState("");
-  const [openId, setOpenId] = useState<string | null>(null);
+  const [openId, setOpenId] = useHashSelection("#mingli-case-");
 
   async function load() {
     const params = new URLSearchParams();
@@ -38,25 +44,18 @@ export function MingliCasesBrowser() {
     if (region) params.set("region", region);
     if (era) params.set("era", era);
     if (q) params.set("q", q);
-    const [sRes, cRes] = await Promise.all([
-      fetch("/api/mingli-cases?stats=1"),
-      fetch(`/api/mingli-cases?${params.toString()}`),
-    ]);
-    if (sRes.ok) setStats(await sRes.json());
-    if (cRes.ok) {
-      const data = await cRes.json();
-      setCases(data.cases ?? []);
-    }
+    await loadRows(params);
   }
 
   useEffect(() => {
-    void load();
-    const hash = typeof window !== "undefined" ? window.location.hash : "";
-    if (hash.startsWith("#mingli-case-")) {
-      setOpenId(hash.replace("#mingli-case-", ""));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (!openId) return;
+    const frame = requestAnimationFrame(() =>
+      document
+        .getElementById(`mingli-case-${openId}`)
+        ?.scrollIntoView({ block: "nearest" }),
+    );
+    return () => cancelAnimationFrame(frame);
+  }, [openId, cases]);
 
   return (
     <section className="panel" id="mingli-cases">
@@ -67,8 +66,7 @@ export function MingliCasesBrowser() {
             ? `共 ${stats.total} 例（女 ${stats.female ?? "-"}，反例 ${stats.counterexamples}，可排日柱约 ${stats.withComputableDay ?? "-"}，与名人库互链 ${stats.linkedToFigures ?? 0}）；约 ${stats.countryCount ?? "-"} 个国家或文明圈`
             : "加载中……"}
           。本库偏排盘与格局教学，与上方“历史人物库”（名人对照）分立；
-          <code>kind=mingli-case</code>。未知时辰一律 <code>hour: null</code>
-          ，典籍示意条目标为资料不足。详见{" "}
+          未知时辰一律保留为未知 ，典籍示意条目标为资料不足。详见{" "}
           <a
             href="https://github.com/chen-bliss/bazi-mingli/blob/master/PRIOR_ART.md"
             target="_blank"
@@ -80,7 +78,13 @@ export function MingliCasesBrowser() {
         </p>
       </header>
 
-      <div className="browser-filters">
+      <form
+        className="browser-filters"
+        onSubmit={(event) => {
+          event.preventDefault();
+          void load();
+        }}
+      >
         <label>
           领域
           <select value={field} onChange={(e) => setField(e.target.value)}>
@@ -152,12 +156,41 @@ export function MingliCasesBrowser() {
             onChange={(e) => setQ(e.target.value)}
           />
         </label>
-        <button type="button" className="btn-secondary" onClick={() => void load()}>
-          筛选
+        <button type="submit" className="btn-secondary">
+          {busy ? "加载中……" : "筛选"}
         </button>
-      </div>
+        <button
+          type="button"
+          className="btn-ghost"
+          onClick={() => {
+            setField("");
+            setFit("");
+            setGender("");
+            setCountry("");
+            setQ("");
+            setRegion("");
+            setEra("");
+            void loadRows();
+          }}
+        >
+          重置
+        </button>
+      </form>
 
-      <div className="figure-table">
+      {error && (
+        <p className="caveat" role="alert">
+          {error}
+        </p>
+      )}
+      <p className="status-line" role="status">
+        {busy ? "正在加载资料……" : `当前显示 ${cases.length} 条`}
+      </p>
+      {!busy && !error && cases.length === 0 && (
+        <p className="empty-state">
+          没有符合条件的资料，请调整筛选或点击重置。
+        </p>
+      )}
+      <div className="figure-table" aria-busy={busy}>
         {cases.map((c) => {
           const open = openId === c.id;
           return (
@@ -165,6 +198,8 @@ export function MingliCasesBrowser() {
               <button
                 type="button"
                 className="figure-row-btn"
+                aria-expanded={open}
+                aria-controls={`detail-${c.id}`}
                 onClick={() => setOpenId(open ? null : c.id)}
               >
                 <span>
@@ -181,10 +216,11 @@ export function MingliCasesBrowser() {
                 </span>
               </button>
               {open && (
-                <div className="figure-detail">
+                <div className="figure-detail" id={`detail-${c.id}`}>
                   <p>
-                    <strong>阶层</strong> {c.socialClass} · <strong>时期</strong>{" "}
-                    {c.dynastyOrPeriod} · <strong>性别</strong>{" "}
+                    <strong>阶层</strong> {c.socialClass} ·{" "}
+                    <strong>时期</strong> {c.dynastyOrPeriod} ·{" "}
+                    <strong>性别</strong>{" "}
                     {c.gender === "female"
                       ? "女"
                       : c.gender === "male"
@@ -216,13 +252,17 @@ export function MingliCasesBrowser() {
                     {c.birth.year
                       ? ` · ${c.birth.year}${c.birth.month ? `-${c.birth.month}` : ""}${c.birth.day ? `-${c.birth.day}` : ""}`
                       : " · 日期不可考"}
-                    {c.birth.hour == null ? " · 时辰未知" : ` · 时 ${c.birth.hour}`}
+                    {c.birth.hour == null
+                      ? " · 时辰未知"
+                      : ` · 时 ${c.birth.hour}`}
                   </p>
                   <p className="muted">{c.birth.note}</p>
                   <p>
                     <strong>结构标签</strong> 日主{" "}
                     {c.chartTags.dayMaster ?? "不明"}
-                    {c.chartTags.dayPillar ? ` · 日柱 ${c.chartTags.dayPillar}` : ""}
+                    {c.chartTags.dayPillar
+                      ? ` · 日柱 ${c.chartTags.dayPillar}`
+                      : ""}
                     {c.chartTags.yearPillar
                       ? ` · 年 ${c.chartTags.yearPillar}`
                       : ""}
@@ -240,7 +280,7 @@ export function MingliCasesBrowser() {
                   {c.linkedFigureId ? (
                     <p className="muted">
                       名人对照库互链：{" "}
-                      <a href={`#figures`}>{c.linkedFigureId}</a>
+                      <a href={`#figure-${c.linkedFigureId}`}>查看人物条目</a>
                     </p>
                   ) : null}
                   {c.biorhythmNote ? (

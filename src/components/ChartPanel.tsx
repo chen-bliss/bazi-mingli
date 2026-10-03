@@ -32,6 +32,12 @@ export function ChartPanel({ chart }: { chart: BaZiChart }) {
                 <div className="pillar-meta">
                   十神 {key === "day" ? "日主" : p.shiShenGan}
                 </div>
+                <div className="pillar-meta">
+                  藏干 {p.hiddenStems.join("、")}
+                </div>
+                <div className="pillar-meta">
+                  支十神 {p.shiShenZhi.join("、")}
+                </div>
               </div>
             );
           },
@@ -41,7 +47,8 @@ export function ChartPanel({ chart }: { chart: BaZiChart }) {
       <div className="meta-block">
         <p>
           <strong>日主</strong> {chart.dayMaster}（{chart.dayMasterWuXing}） ·{" "}
-          <strong>强弱</strong> {chart.strength.label}（{chart.strength.score}）
+          <strong>强弱初判</strong> {chart.strength.label}（
+          {chart.strength.score}）
         </p>
         <p>{chart.strength.summary}</p>
         <p>
@@ -55,6 +62,31 @@ export function ChartPanel({ chart }: { chart: BaZiChart }) {
         </p>
       </div>
 
+      <div className="element-grid" aria-label="五行表层计数">
+        {Object.entries(chart.wuXingCount).map(([element, count]) => (
+          <div key={element}>
+            <div className="element-bar">
+              <span style={{ height: `${(count / 8) * 100}%` }} />
+            </div>
+            <span>
+              {element} · {count}
+            </span>
+          </div>
+        ))}
+      </div>
+      <details className="calculation-note">
+        <summary>排盘口径与初判局限</summary>
+        <p>
+          日柱：
+          {chart.calculation.dayBoundary === "midnight"
+            ? "00:00 换日"
+            : "23:00 子初换日"}
+          。
+        </p>
+        <p>{chart.calculation.timeBasis}</p>
+        <p>{chart.calculation.strengthMethod}</p>
+        <p>五行柱形图仅统计四柱天干与地支本气共八项，藏干另列展示。</p>
+      </details>
       <ul className="hint-list">
         {chart.classicalHints.map((h) => (
           <li key={h}>{h}</li>

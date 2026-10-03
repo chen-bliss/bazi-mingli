@@ -3,6 +3,12 @@ import type {
   BiorhythmPoint,
   BiorhythmResult,
 } from "./types";
+import {
+  calendarDate,
+  isValidCalendarDate,
+  parseCalendarDate,
+  utcDateString,
+} from "../dates";
 
 const PHYSICAL = 23;
 const EMOTIONAL = 28;
@@ -10,7 +16,7 @@ const INTELLECTUAL = 33;
 const CRITICAL_THRESHOLD = 0.08;
 
 function startOfUtcDay(d: Date): Date {
-  return new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  return calendarDate(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate());
 }
 
 function formatDate(d: Date): string {
@@ -55,9 +61,9 @@ function statusOf(
     name,
     nameEn,
     periodDays,
-    value: Number(value.toFixed(4)),
+    value: Number(value.toFixed(4)) || 0,
     phase: phaseOf(value),
-    percent: Number((value * 100).toFixed(1)),
+    percent: Number((value * 100).toFixed(1)) || 0,
     daysToNextPeak: daysToNext(daysAlive, periodDays, (v) => v > 0.98),
     daysToNextCritical: daysToNext(
       daysAlive,
@@ -69,18 +75,32 @@ function statusOf(
 
 export function calculateBiorhythm(
   birth: { year: number; month: number; day: number },
-  target: Date = new Date(),
+  target: Date | string = utcDateString(),
   horizonDays = 30,
 ): BiorhythmResult {
-  const birthDate = new Date(birth.year, birth.month - 1, birth.day);
-  const daysAlive = daysBetween(birthDate, target);
+  if (!isValidCalendarDate(birth.year, birth.month, birth.day))
+    throw new Error("出生日期不存在");
+  const targetDate =
+    typeof target === "string" ? parseCalendarDate(target) : target;
+  if (!targetDate || !Number.isFinite(targetDate.getTime()))
+    throw new Error("观测日期无效");
+  if (!Number.isInteger(horizonDays) || horizonDays < 0 || horizonDays > 366)
+    throw new Error("观测范围须为 0 至 366 日");
+  const normalizedTarget = startOfUtcDay(targetDate);
+  const birthDate = calendarDate(birth.year, birth.month, birth.day);
+  const daysAlive = daysBetween(birthDate, normalizedTarget);
   if (daysAlive < 0) {
     throw new Error("目标日期不能早于出生日期");
   }
 
   const physical = statusOf("体力", "physical", PHYSICAL, daysAlive);
   const emotional = statusOf("情绪", "emotional", EMOTIONAL, daysAlive);
-  const intellectual = statusOf("智力", "intellectual", INTELLECTUAL, daysAlive);
+  const intellectual = statusOf(
+    "智力",
+    "intellectual",
+    INTELLECTUAL,
+    daysAlive,
+  );
   const average = Number(
     ((physical.value + emotional.value + intellectual.value) / 3).toFixed(4),
   );
@@ -88,17 +108,17 @@ export function calculateBiorhythm(
   const series: BiorhythmPoint[] = [];
   const criticalDaysAhead: string[] = [];
   for (let i = 0; i <= horizonDays; i += 1) {
-    const d = new Date(target);
-    d.setDate(d.getDate() + i);
+    const d = new Date(normalizedTarget);
+    d.setUTCDate(d.getUTCDate() + i);
     const n = daysAlive + i;
     const p = sineValue(n, PHYSICAL);
     const e = sineValue(n, EMOTIONAL);
     const intel = sineValue(n, INTELLECTUAL);
     const point: BiorhythmPoint = {
       date: formatDate(d),
-      physical: Number(p.toFixed(4)),
-      emotional: Number(e.toFixed(4)),
-      intellectual: Number(intel.toFixed(4)),
+      physical: Number(p.toFixed(4)) || 0,
+      emotional: Number(e.toFixed(4)) || 0,
+      intellectual: Number(intel.toFixed(4)) || 0,
       average: Number(((p + e + intel) / 3).toFixed(4)),
     };
     series.push(point);
@@ -114,7 +134,7 @@ export function calculateBiorhythm(
 
   return {
     birthDate: formatDate(birthDate),
-    targetDate: formatDate(target),
+    targetDate: formatDate(normalizedTarget),
     daysAlive,
     today: { physical, emotional, intellectual, average },
     series,

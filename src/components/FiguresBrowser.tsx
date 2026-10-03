@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useCatalog, useHashSelection } from "./useCatalog";
 import type { HistoricalFigure } from "@/lib/figures";
 
 interface Stats {
@@ -15,14 +16,19 @@ interface Stats {
 }
 
 export function FiguresBrowser() {
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [figures, setFigures] = useState<HistoricalFigure[]>([]);
+  const {
+    stats,
+    rows: figures,
+    busy,
+    error,
+    load: loadRows,
+  } = useCatalog<HistoricalFigure, Stats>("/api/figures", "figures");
   const [field, setField] = useState("");
   const [fit, setFit] = useState("");
   const [gender, setGender] = useState("");
   const [country, setCountry] = useState("");
   const [q, setQ] = useState("");
-  const [openId, setOpenId] = useState<string | null>(null);
+  const [openId, setOpenId] = useHashSelection("#figure-");
 
   async function load() {
     const params = new URLSearchParams();
@@ -31,21 +37,18 @@ export function FiguresBrowser() {
     if (gender) params.set("gender", gender);
     if (country) params.set("country", country);
     if (q) params.set("q", q);
-    const [sRes, fRes] = await Promise.all([
-      fetch("/api/figures?stats=1"),
-      fetch(`/api/figures?${params.toString()}`),
-    ]);
-    if (sRes.ok) setStats(await sRes.json());
-    if (fRes.ok) {
-      const data = await fRes.json();
-      setFigures(data.figures ?? []);
-    }
+    await loadRows(params);
   }
 
   useEffect(() => {
-    void load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (!openId) return;
+    const frame = requestAnimationFrame(() =>
+      document
+        .getElementById(`figure-${openId}`)
+        ?.scrollIntoView({ block: "nearest" }),
+    );
+    return () => cancelAnimationFrame(frame);
+  }, [openId, figures]);
 
   return (
     <section className="panel" id="figures">
@@ -55,7 +58,7 @@ export function FiguresBrowser() {
           {stats
             ? `共 ${stats.total} 人（女 ${stats.female ?? "-"}，反例 ${stats.counterexamples}，可排日柱约 ${stats.withComputableDay ?? "-"}）；约 ${stats.countryCount ?? "-"} 个国家或文明圈，${stats.fields.length} 个领域标签`
             : "加载中……"}
-          。本库 <code>kind=figure</code>，用于相似命例匹配；格局教学见下方「历史命例库」。详见{" "}
+          。本库用于相似人物对照；格局教学见下方「历史命例库」。详见{" "}
           <a
             href="https://github.com/chen-bliss/bazi-mingli/blob/master/PRIOR_ART.md"
             target="_blank"
@@ -67,7 +70,13 @@ export function FiguresBrowser() {
         </p>
       </header>
 
-      <div className="browser-filters">
+      <form
+        className="browser-filters"
+        onSubmit={(event) => {
+          event.preventDefault();
+          void load();
+        }}
+      >
         <label>
           领域
           <select value={field} onChange={(e) => setField(e.target.value)}>
@@ -117,19 +126,48 @@ export function FiguresBrowser() {
             onChange={(e) => setQ(e.target.value)}
           />
         </label>
-        <button type="button" className="btn-secondary" onClick={() => void load()}>
-          筛选
+        <button type="submit" className="btn-secondary">
+          {busy ? "加载中……" : "筛选"}
         </button>
-      </div>
+        <button
+          type="button"
+          className="btn-ghost"
+          onClick={() => {
+            setField("");
+            setFit("");
+            setGender("");
+            setCountry("");
+            setQ("");
+            void loadRows();
+          }}
+        >
+          重置
+        </button>
+      </form>
 
-      <div className="figure-table">
+      {error && (
+        <p className="caveat" role="alert">
+          {error}
+        </p>
+      )}
+      <p className="status-line" role="status">
+        {busy ? "正在加载资料……" : `当前显示 ${figures.length} 条`}
+      </p>
+      {!busy && !error && figures.length === 0 && (
+        <p className="empty-state">
+          没有符合条件的资料，请调整筛选或点击重置。
+        </p>
+      )}
+      <div className="figure-table" aria-busy={busy}>
         {figures.map((f) => {
           const open = openId === f.id;
           return (
-            <div key={f.id} className="figure-row">
+            <div key={f.id} className="figure-row" id={`figure-${f.id}`}>
               <button
                 type="button"
                 className="figure-row-btn"
+                aria-expanded={open}
+                aria-controls={`detail-${f.id}`}
                 onClick={() => setOpenId(open ? null : f.id)}
               >
                 <span>
@@ -145,11 +183,16 @@ export function FiguresBrowser() {
                 </span>
               </button>
               {open && (
-                <div className="figure-detail">
+                <div className="figure-detail" id={`detail-${f.id}`}>
                   <p>
-                    <strong>阶层</strong> {f.socialClass} · <strong>时期</strong>{" "}
-                    {f.dynastyOrPeriod} · <strong>性别</strong>{" "}
-                    {f.gender === "female" ? "女" : f.gender === "male" ? "男" : "未标"}
+                    <strong>阶层</strong> {f.socialClass} ·{" "}
+                    <strong>时期</strong> {f.dynastyOrPeriod} ·{" "}
+                    <strong>性别</strong>{" "}
+                    {f.gender === "female"
+                      ? "女"
+                      : f.gender === "male"
+                        ? "男"
+                        : "未标"}
                   </p>
                   <p>
                     <strong>地域</strong> {f.country}
@@ -164,13 +207,17 @@ export function FiguresBrowser() {
                     {f.birth.year
                       ? ` · ${f.birth.year}${f.birth.month ? `-${f.birth.month}` : ""}${f.birth.day ? `-${f.birth.day}` : ""}`
                       : " · 日期不可考"}
-                    {f.birth.hour == null ? " · 时辰未知" : ` · 时 ${f.birth.hour}`}
+                    {f.birth.hour == null
+                      ? " · 时辰未知"
+                      : ` · 时 ${f.birth.hour}`}
                   </p>
                   <p className="muted">{f.birth.note}</p>
                   <p>
                     <strong>结构标签</strong> 日主{" "}
                     {f.chartTags.dayMaster ?? "不明"}
-                    {f.chartTags.dayPillar ? ` · 日柱 ${f.chartTags.dayPillar}` : ""}
+                    {f.chartTags.dayPillar
+                      ? ` · 日柱 ${f.chartTags.dayPillar}`
+                      : ""}
                     {f.chartTags.dayMasterYinYang
                       ? ` · ${f.chartTags.dayMasterYinYang}`
                       : ""}

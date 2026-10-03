@@ -2,7 +2,7 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 
-export function AuthButton() {
+export function AuthButton({ configured }: { configured?: boolean }) {
   const { data, status } = useSession();
 
   if (status === "loading") {
@@ -14,9 +14,10 @@ export function AuthButton() {
       <button
         type="button"
         className="btn-ghost"
+        disabled={configured !== true}
         onClick={() => signIn("github")}
       >
-        GitHub 登录
+        {configured === false ? "登录未配置" : "GitHub 登录"}
       </button>
     );
   }

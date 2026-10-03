@@ -53,6 +53,7 @@ function scoreFigure(
 
   const certainty = figure.birth.birthCertainty;
   const computable =
+    certainty !== "year-only" &&
     tags.dayMaster &&
     tags.dayMaster !== "不明" &&
     features.dayMaster &&
@@ -71,6 +72,7 @@ function scoreFigure(
   }
 
   if (
+    computable &&
     tags.dayPillar &&
     tags.dayPillar === features.dayPillar &&
     tags.dayPillar !== "不明"
@@ -80,6 +82,7 @@ function scoreFigure(
   }
 
   if (
+    computable &&
     tags.dayMasterYinYang &&
     tags.dayMasterYinYang === features.dayMasterYinYang
   ) {
@@ -88,6 +91,7 @@ function scoreFigure(
   }
 
   if (
+    computable &&
     tags.seasonality &&
     tags.seasonality !== "不明" &&
     tags.seasonality === features.seasonality
@@ -97,6 +101,7 @@ function scoreFigure(
   }
 
   if (
+    computable &&
     tags.strength &&
     tags.strength !== "不明" &&
     tags.strength === features.strength
@@ -109,11 +114,11 @@ function scoreFigure(
     toVector(features.elementCounts),
     toVector(tags.elementCounts),
   );
-  if (cos > 0.55) {
+  if (computable && cos > 0.55) {
     const contrib = Number((cos * 14).toFixed(2));
     score += contrib;
     reasons.push(`五行向量余弦相近（${cos.toFixed(2)}）`);
-  } else {
+  } else if (computable) {
     const wx = overlapScore(
       features.dominantWuXing,
       tags.dominantWuXing ?? [],
@@ -130,7 +135,7 @@ function scoreFigure(
     tags.shiShenTendency ?? [],
     14,
   );
-  if (ss.hits.length) {
+  if (computable && ss.hits.length) {
     score += ss.score;
     reasons.push(`十神倾向重叠：${ss.hits.join("、")}`);
   }
@@ -142,22 +147,25 @@ function scoreFigure(
   }
 
   // 置信度与时辰缺失降权
-  if (certainty === "legendary" || tags.confidence === "low") {
+  if (certainty === "year-only") {
+    score *= 0.55;
+    caveats.push("仅有年份级出生信息，不使用日柱和五行计数匹配。");
+  } else if (certainty === "legendary" || tags.confidence === "low") {
     score *= 0.68;
     caveats.push("该人物出生信息置信较低、存疑或时辰未知，匹配已降权。");
   } else if (certainty === "disputed" || tags.confidence === "medium") {
     score *= 0.88;
     caveats.push("时辰未知或日期存疑，仅日主或日柱层特征参与较高权重。");
-  } else if (certainty === "year-only") {
-    score *= 0.55;
-    caveats.push("仅有年份级出生信息，自动八字匹配权重很低。");
+  }
+
+  if (!tags.hourKnown) {
+    score *= 0.9;
+    caveats.push("出生时辰未知，未使用假定时柱，五行仅统计已知三柱。");
   }
 
   if (!computable) {
     score *= 0.5;
-    caveats.push(
-      "缺乏可计算日柱，主要依据阶层、领域与叙事标签弱匹配；不会伪造出生数据。",
-    );
+    caveats.push("缺乏可计算日柱，主要依据叙事标签弱匹配；不会伪造出生数据。");
   }
 
   if (figure.fitAssessment === "不符合" || figure.counterexample) {
@@ -172,7 +180,7 @@ function scoreFigure(
   }
 
   if (!reasons.length) {
-    reasons.push("仅有较弱的领域或标签邻近性。");
+    reasons.push("仅有较弱的标签邻近性。");
   }
 
   return {
@@ -186,7 +194,10 @@ export function matchHistoricalFigures(
   features: ChartFeatures,
   options?: { limit?: number; includeCounterexamples?: boolean },
 ): FigureMatch[] {
-  const limit = options?.limit ?? 6;
+  const requestedLimit = options?.limit ?? 6;
+  const limit = Number.isFinite(requestedLimit)
+    ? Math.min(12, Math.max(1, Math.floor(requestedLimit)))
+    : 6;
   const all = loadHistoricalFigures();
 
   const ranked = all
@@ -205,7 +216,9 @@ export function matchHistoricalFigures(
     );
     if (!hasCounter) {
       const counter = ranked.find(
-        (m) => m.figure.counterexample || m.figure.fitAssessment === "不符合",
+        (m) =>
+          m.score > 0 &&
+          (m.figure.counterexample || m.figure.fitAssessment === "不符合"),
       );
       if (counter) {
         if (top.length >= limit) top.pop();

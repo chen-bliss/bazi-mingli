@@ -1,5 +1,7 @@
 "use client";
 
+import ReactMarkdown from "react-markdown";
+
 export function AnalysisPanel({
   analysis,
   mode,
@@ -18,16 +20,7 @@ export function AnalysisPanel({
         </p>
       </header>
       <article className="analysis-body">
-        {analysis.split("\n").map((line, idx) => {
-          if (line.startsWith("## ")) {
-            return <h3 key={idx}>{line.replace(/^##\s+/, "")}</h3>;
-          }
-          if (line.startsWith("- ")) {
-            return <li key={idx}>{line.replace(/^-+\s*/, "")}</li>;
-          }
-          if (!line.trim()) return <br key={idx} />;
-          return <p key={idx}>{line}</p>;
-        })}
+        <ReactMarkdown>{analysis}</ReactMarkdown>
       </article>
     </section>
   );

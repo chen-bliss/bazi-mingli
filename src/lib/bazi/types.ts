@@ -6,6 +6,7 @@ export interface BirthInput {
   day: number;
   hour: number;
   minute?: number;
+  dayBoundary?: "midnight" | "zi-hour";
   /** 性别，用于大运顺逆等扩展；当前可选 */
   gender?: "male" | "female";
 }
@@ -18,9 +19,15 @@ export interface PillarInfo {
   wuXing: string;
   shiShenGan: string;
   shiShenZhi: string[];
+  hiddenStems: string[];
 }
 
 export interface BaZiChart {
+  calculation: {
+    dayBoundary: "midnight" | "zi-hour";
+    timeBasis: string;
+    strengthMethod: string;
+  };
   solarDate: string;
   lunarDate: string;
   shengXiao: string;

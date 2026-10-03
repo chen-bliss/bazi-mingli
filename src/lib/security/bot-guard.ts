@@ -7,6 +7,7 @@ export interface ClientGuardInput {
 }
 
 export function getClientIp(req: NextRequest): string {
+  if (process.env.TRUST_PROXY_HEADERS !== "1") return "unknown";
   const xf = req.headers.get("x-forwarded-for");
   if (xf) return xf.split(",")[0]?.trim() || "unknown";
   return req.headers.get("x-real-ip") || "unknown";
