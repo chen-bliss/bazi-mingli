@@ -34,8 +34,11 @@ export function BirthForm({
   onAnalyze,
 }: Props) {
   const startedAt = useRef(0);
+  const [ready, setReady] = useState(false);
   useEffect(() => {
     startedAt.current = Date.now();
+    const timer = setTimeout(() => setReady(true), 1200);
+    return () => clearTimeout(timer);
   }, []);
   const [year, setYear] = useState(1990);
   const [month, setMonth] = useState(5);
@@ -53,7 +56,7 @@ export function BirthForm({
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (busy) return;
+    if (busy || !ready) return;
     const values: BirthFormValues = {
       year,
       month,
@@ -80,14 +83,18 @@ export function BirthForm({
   }
 
   return (
-    <form className="panel form-grid" onSubmit={handleSubmit} aria-busy={busy}>
+    <form
+      className="panel form-grid"
+      onSubmit={handleSubmit}
+      aria-busy={busy || !ready}
+    >
       <header className="section-head">
         <h2>输入出生信息</h2>
         <p>
           使用公历日期与出生地钟表时间。示例生辰可直接排盘，也可修改后查看。
         </p>
       </header>
-      <fieldset disabled={busy} className="form-grid">
+      <fieldset disabled={busy || !ready} className="form-grid">
         <legend className="sr-only">出生日期与排盘选项</legend>
         <div className="form-row">
           <label>
@@ -206,7 +213,7 @@ export function BirthForm({
         </label>
         <div className="actions">
           <button type="submit" value="chart" className="btn-primary">
-            {busy ? "处理中……" : "排盘与节律"}
+            {busy ? "处理中……" : ready ? "排盘与节律" : "准备中……"}
           </button>
           <button
             type="submit"
